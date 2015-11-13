@@ -1,0 +1,200 @@
+@charset "UTF-8";
+body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,fieldset,legend,button,input,textarea,th,td{margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary{display:block}body{overflow-x:hidden;overflow-y:auto}body,button,input,select,textarea{font:16px/1 "Microsoft YaHei", "微软雅黑", STXihei, "华文细黑", serif;color:#222}button,input,select,textarea{font-size:100%}textarea{overflow:auto;vertical-align:top}button,input{line-height:normal}button,select{text-transform:none}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}input[type="checkbox"],input[type="radio"]{vertical-align:middle}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}a{color:#177ccc}a:hover{text-decoration:underline}mark{background-color:transparent}address,cite,dfn,em,var{font-style:normal}code,kbd,pre,samp,tt{font-family:"Courier New", Courier, monospace}small{font-size:12px}ul,ol{list-style:none}abbr[title],acronym[title]{border-bottom:1px dotted;cursor:help}q:before,q:after{content:''}legend{color:#000}fieldset,img{border:none}table{border-collapse:collapse;border-spacing:0}i{font-style:normal}
+/*顶部条*/
+.top-bar {
+    background-color: rgba(233, 96, 0, 0.8);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    height: 3.4em;
+    margin:0px;
+    padding:0px;
+    z-index: 9999;
+}
+.top-bar .wrapper {
+    max-width: 48em;
+    height: 3.4em;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1em;
+    padding-right: 1em;
+    position: relative;
+}
+.logo {
+    width: 4em;
+    height: 3.4em;
+    background: url("../images/pay/logo.png") no-repeat center;
+    background-size: auto 80%;
+    float: left;
+}
+.nav {
+    height: 1.2em;
+    float: left;
+    padding-top: 1.1em;
+    margin-left: 1em;
+}
+.nav a {
+    font-size: 1.2em;
+    display: block;
+    float: left;
+    height: 1em;
+    line-height: 1em;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+.nav a.first {
+    border-right: 1px solid #FFFFFF;
+    padding-right: 1em;
+    margin-right: 1em;
+}
+.buy-btn {
+    position: absolute;
+    right: 1em;
+    top: 0.7em;
+    height: 2em;
+    line-height: 2em;
+    padding-left: 3em;
+    padding-right: 1em;
+    color: #ed730d;
+    background: url("../images/pay/buy-btn.png") no-repeat 1em -38px #fbbd43;
+    background-size: 18% auto;
+    border-radius: .4em;
+    cursor: pointer;
+}
+.buy-btn:hover {
+    background-position: 1em 3px;
+    background-color: rgb(233,96,0);
+    background-size: 18% auto;
+    color: #fbbd43;
+}
+.pay-hd {
+    padding: 100px 2em 30px;
+    border-bottom: 1px solid #dddddd;
+    text-align: center;
+}
+.pay-hd .last-time {
+    color: #e96000;
+    line-height: 2em;
+}
+.pay-hd .tl {
+    font-size: 2em;
+    line-height: 1.2em;
+    color: #878787;
+}
+.pay-item {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #dddddd;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.pay-item .item-hd {
+    font-size: 1.5em;
+    color: #878787;
+    margin-left: 1.33em;
+    margin-right: 1.33em;
+    line-height: 3em;
+}
+.pay-item .item-bd {
+    margin-left: 2em;
+    margin-right: 2em;
+    position: relative;
+}
+.item-icon {
+    position: absolute;
+    top: 1em;
+    left: 0;
+    bottom: 1em;
+    width: 30%;
+    background: url("../images/pay/amazon.png") no-repeat center;
+    background-size: 46% auto;
+    border-right: 1px solid #dddddd;
+}
+.weixin-icon {
+    background: url("../images/pay/weixin.png") no-repeat center;
+    background-size: 46% auto;
+}
+.zhifubao-icon {
+    background: url("../images/pay/zhifubao.png") no-repeat center;
+    background-size: 46% auto;
+}
+.item-pay {
+    margin-left: 40%;
+}
+.amazon-pay {
+    padding-top: 3em;
+}
+.amazon-btn {
+    width: 10em;
+    height: 2em;
+    line-height: 2em;
+    padding-left: 1em;
+    border-radius: 0.4em;
+    text-align: center;
+    color: #FFFFFF;
+    background: url("../images/pay/pay-btn.png") no-repeat 2em center #e96000;
+    background-size: auto 60%;
+    font-size: 1.4em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1em;
+    display: block;
+    text-decoration: none;
+}
+.item-info {
+    color: #595757;
+    line-height: 1.5em;
+    text-align: center;
+}
+.item-qrcode {
+    width: 10em;
+    height: 10em;
+    padding: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #f6f6f6;
+    margin-bottom: .5em;
+}
+.item-qrcode img {
+    width: 100%;
+    height: 100%;
+}
+@media (min-width: 641px) {
+}
+@media (min-width: 1679px) and (max-width: 1919px) {
+}
+@media (min-width: 1439px) and (max-width: 1679px) {
+}
+@media (min-width: 1279px) and (max-width: 1439px) {
+}
+@media (min-width: 1023px) and (max-width: 1279px) {
+}
+@media (max-width: 640px) {
+}
+@media (max-width: 480px) {
+    body {
+        font-size: 12px;
+    }
+    .buy-btn {
+        width: 2.4em;
+        padding-left: 0;
+        padding-right: 0;
+        overflow: hidden;
+        background-position: center -32px;
+        background-size: 68% auto;
+        text-indent: -99px;
+    }
+    .buy-btn:hover {
+        background-position: center 2px;
+        background-size: 68% auto;
+    }
+    .amazon-btn {
+        max-width: 90%;
+        padding-left: 8px;
+        padding-right: 0;
+        background-position: 8px center;
+    }
+}

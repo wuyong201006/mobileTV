@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+    <link href="css/phone.css" rel="stylesheet">
+    <script>
+        var ispc = IsPC();
+        if(ispc){
+            location.href = "test.html";
+        }
+        function IsPC() {
+            var userAgentInfo = navigator.userAgent;
+            var Agents = ["Android", "iPhone",
+                "SymbianOS", "Windows Phone",
+                "iPad", "iPod"];
+            var flag = true;
+            for (var v = 0; v < Agents.length; v++) {
+                if (userAgentInfo.indexOf(Agents[v]) > 0) {
+                    flag = false;
+                    break;
+                }
+            }
+            return flag;
+        }
+    </script>
+</head>
+<body>
+<div class="header">
+    <div class="wrapper clearfix">
+        <div class="logo"></div>
+        <div class="serve">
+            <div class="dajia">
+                <a href="#guanzhu">大家关注</a>
+            </div>
+            <div class="kehu">
+                <a href="#kehu">客户服务</a>
+            </div>
+        </div>
+        <div class="buy-btn">
+            <a target="_blank" href="test-pay.html"></a>
+        </div>
+    </div>
+</div>
+<div class="banner">
+    <div id="myCarousel" class="carousel slide">
+        <!-- 轮播（Carousel）指标 -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+        <!-- 轮播（Carousel）项目 -->
+        <div class="carousel-inner">
+            <div class="item active">
+                <div class="buy-btn">
+                    <a target="_blank" href="test-pay.html"></a>
+                </div>
+                <img src="images/phone/1.jpg" alt="First slide" />
+            </div>
+            <div class="item">
+                <div class="buy-btn_2">
+                    <a target="_blank" href="test-pay.html"></a>
+                </div>
+                <img src="images/phone/2.jpg" alt="Second slide" />
+            </div>
+            <div class="item ">
+                <div class="buy-btn">
+                   <a target="_blank" href="test-pay.html"></a>
+                </div>
+                <img src="images/phone/3.jpg" alt="Third slide" />
+            </div>
+        </div>
+        <!-- 轮播（Carousel）导航 -->
+        <a class="carousel-control left" href="#myCarousel" data-slide="prev"></a>
+        <a class="carousel-control right" href="#myCarousel" data-slide="next"></a>
+    </div>
+</div>
+<div class="follow">
+      <div class="hd" id="guanzhu">大家关注</div>
+      <div class="bd">
+         <ul>
+             <li>
+                 <div class="item">
+                     <div class="pic">
+                         <img src="images/phone/phone-18.png" />
+                     </div>
+                     <div class="info">
+                        <h4>蔡文胜</h4>
+                        <p class="desc"><span>&lt;美图秀秀董事长&gt;</span><br />做自己喜欢的事！</p>
+                     </div>
+                 </div>
+             </li>
+             <li>
+                 <div class="item item-right">
+                     <div class="pic">
+                         <img src="images/phone/phone-19.png" />
+                     </div>
+                     <div class="info">
+                        <h4>李开复</h4>
+                        <p class="desc"><span>&lt;创新工场董事长&gt;</span><br />Follow your hart,are you shall change the world!</p>
+                     </div>
+                 </div>
+              </li>
+             <li>
+                 <div class="item">
+                     <div class="pic">
+                         <img src="images/phone/phone-20.png" />
+                     </div>
+                     <div class="info">
+                        <h4>邓锋</h4>
+                        <p class="desc"><span>&lt;北极光创投董事长&gt;</span><br />做有意思且有意义的事！</p>
+                     </div>
+                 </div>
+              </li>
+         </ul>
+      </div>
+</div>
+<div class="line"></div>
+<div class="chat" id="kehu">
+   <div class="hd"><span class="icon"></span><span class="text">1-855-786-8899</span></div>
+   <div class="border_box">
+         <div id="chatList" class="chatList">
+            <div class="txt1">
+              <div class="item">
+                 <p class="desc1">客服：</p>
+                 <p class="time">18:54</p>
+               </div>
+               <p class="que">您好，欢迎光临！请问有什么可以帮到您的？</p>
+            </div>
+         </div>
+     
+      <div class="chat-textarea">
+         <div class="txt-wrapper">
+             <textarea class="txt" id="chatTextArea"  placeholder="Ctrl+回车可以快速发送消息！"></textarea>
+         </div>
+         <div id="submitBtn" class="fasong_btn">
+            <a></a>
+         </div>
+      </div>
+  
+</div>
+</div>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/jquery.cookie.js"></script>
+<script type="text/javascript" src="js/socket.io.js"></script>
+<script type="text/javascript">
+    var saleschat;
+    var cid,nickname;
+    var $chatTextArea = $("#chatTextArea");
+    var $submit = $("#submitBtn");
+    var $chatList = $("#chatList");
+    var $tipCustomer = $("#tipCustomer");
+    var ctrl = false;
+    $(document).ready(function () {
+        getCid();
+        socketIO();
+        listen();
+    });
+    function listen(){
+        $(window).keydown(function(event){
+            switch(event.keyCode) {
+                case 13:
+                    if(ctrl){
+                        ctrl = false;
+                        speak();
+                    }
+                    break;
+                case 17:
+                    ctrl = true;
+                    break;
+                default :
+                    console.info(event.keyCode);
+                    break;
+            }
+        });
+        $chatTextArea.keyup(function(){
+            ctrl = false;
+        });
+        $submit.on("click", function () {
+            speak();
+        })
+    }
+    function speak(){
+        var txt = $chatTextArea.val();
+        var html = '';
+        if(txt != ""){
+            console.info("{code: 'speak', cnt: " + txt + ", style:''}");
+            saleschat.send({code: 'speak', cnt: txt, style:""});
+            html += '<div class="txt1"><div class="item"><p class="desc">我：</p><p class="time">' + timeUTCFormat() + '</p></div><p class="que">' + txt + '</p></div>';
+            //html += '<li><div class="msg"><h2 class="msg-from">我<span class="release-time">' + timeUTCFormat() + '</span></h2><p class="msg-cnt">' + txt + '</p></div></li>';
+            $chatList.append(html);
+            $chatTextArea.val("");
+        }
+    }
+    function wellcome() {
+        var html = '<div class="txt1"><div class="item"><p class="desc1">客服：</p><p class="time">' + timeUTCFormat() + '</p></div><p class="que">您好，欢迎光临！请问有什么可以帮到您的？</p></div>';
+        //var html = '<li><div class="come-msg msg"><h2 class="msg-from">客服<span class="release-time">' + timeUTCFormat() + '</span></h2><p class="msg-cnt">您好，欢迎光临！请问有什么可以帮到您的？</p></div></li>';
+        $chatList.html(html);
+    }
+    function comeSpeak(data){
+        var html = '';
+        html += '<div class="txt1"><div class="item"><p class="desc1">' + data.nickname + '：</p><p class="time">' + timeUTCFormat(data.tm) + '</p></div><p class="que">' + data.cnt + '</p></div>';
+        //html += '<li><div class="come-msg msg"><h2 class="msg-from">' + data.nickname + '<span class="release-time">' + timeUTCFormat(data.tm) + '</span></h2><p class="msg-cnt">' + data.cnt + '</p></div></li>';
+        $chatList.append(html);
+    }
+    function timeUTCFormat(time){
+        var date;
+        if(time == undefined || time == ""){
+            date = new Date();
+        } else {
+            date = new Date(parseInt(time));
+        }
+        var h = date.getHours ();
+        h = h ? (h >= 10 ? h : "0" + h) + ":" : "00:";
+        var m = date.getMinutes ();
+        m = m ? (m >= 10 ? m : "0" + m ) : "00";
+        return h + m;
+    }
+    function getCid(){
+        cid = $.cookie("customer_cid");
+        if(cid == undefined){
+            var time = new Date().getTime();
+            cid = "RDID_" + time;
+            $.cookie("customer_cid",cid,{path:"/"});
+        }
+        nickname = "客户" + cid.slice(14,18);
+        $tipCustomer.text(nickname);
+    }
+    function socketIO(){
+        saleschat = io.connect('http://221.228.74.40', {
+            reconnection: true,
+            reconnectionDelay: 1000,
+            reconnectionDelayMax: 3000,
+            timeout: 1000,
+            mutiplex: false,
+            path: '/saleschat/socket.io'
+        });
+        saleschat.on('connect', function () {
+            console.info('client is connected successfully');
+            //Step N.5 必须进行CheckIn注册
+            console.info("{cid: " + cid + ", code: 'checkIn', nickname: " + nickname + "}");
+            saleschat.send ({cid: cid, code: 'checkIn', nickname: nickname});
+            wellcome();
+        });
+        //消息通道其他消息处理
+        saleschat.on('reconnect', function (trynum) {
+            console.info('client is trying to reconnect,NO.' + trynum);
+        });
+        saleschat.on('disconnect', function () {
+            console.info('client is disconnected exceptionally');
+        });
+        saleschat.on('error', function (err) {
+            console.info('client errors', err);
+        });
+        saleschat.on ('message', function(msg) {
+            switch (msg.code) {
+                case 'checkIn_ok':
+                    //用户CheckIn注册成功
+                    console.log(msg.code);
+                    saleschat.send({code: 'history'});
+                    break;
+                case 'speak_ok':
+                    //用户发音反馈成功
+                    console.log(msg.code);
+                    break;
+                case 'speak':
+                    //用户发音反馈成功
+                    console.log(msg.code,"来消息");
+                    comeSpeak(msg);
+                    break;
+                case 'broadcast':
+                    //用户发音反馈成功 群内有人说话广播消息
+                    break;
+                case 'history_ok':
+                    console.log(msg.code);
+                    break;
+                case 'delspeak':
+                    //有一条消息被删除
+                    console.log(msg.code);
+                    break;
+                case 'error':
+                    //消息异常错误
+                    console.log(msg.code);
+                    break;
+                default :
+                    console.log(msg);
+                    break;
+            }
+        });
+    }
+</script>
+</body>
+</html>
