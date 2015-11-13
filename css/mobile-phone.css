@@ -1,103 +1,225 @@
 @charset "UTF-8";
-body,h1,h2,h3,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,fieldset,legend,button,input,textarea,th,td{margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary{display:block}body{overflow-x:hidden;overflow-y:auto}body,button,input,select,textarea{font:16px/1 "Microsoft YaHei", "微软雅黑", STXihei, "华文细黑", serif;color:#222}button,input,select,textarea{font-size:100%}textarea{overflow:auto;vertical-align:top}button,input{line-height:normal}button,select{text-transform:none}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}input[type="checkbox"],input[type="radio"]{vertical-align:middle}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}a{color:#177ccc}a:hover{text-decoration:underline}mark{background-color:transparent}address,cite,dfn,em,var{font-style:normal}code,kbd,pre,samp,tt{font-family:"Courier New", Courier, monospace}small{font-size:12px}ul,ol{list-style:none}abbr[title],acronym[title]{border-bottom:1px dotted;cursor:help}q:before,q:after{content:''}legend{color:#000}fieldset,img{border:none}table{border-collapse:collapse;border-spacing:0}i{font-style:normal}
-.logo{
-    max-width: 100%;
+body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,fieldset,legend,button,input,textarea,th,td{margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary{display:block}body{overflow-x:hidden;overflow-y:auto}body,button,input,select,textarea{font:16px/1 "Microsoft YaHei", "微软雅黑", STXihei, "华文细黑", serif;color:#222}button,input,select,textarea{font-size:100%}textarea{overflow:auto;vertical-align:top}button,input{line-height:normal}button,select{text-transform:none}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}input[type="checkbox"],input[type="radio"]{vertical-align:middle}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}a{color:#177ccc}a:hover{text-decoration:underline}mark{background-color:transparent}address,cite,dfn,em,var{font-style:normal}code,kbd,pre,samp,tt{font-family:"Courier New", Courier, monospace}small{font-size:12px}ul,ol{list-style:none}abbr[title],acronym[title]{border-bottom:1px dotted;cursor:help}q:before,q:after{content:''}legend{color:#000}fieldset,img{border:none}table{border-collapse:collapse;border-spacing:0}i{font-style:normal}
+.clearfix:before,.clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { zoom: 1; }
+html,body {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.header {
+    height: 8em;
+    background: url("../images/phone/header-bg.png") repeat-x left top;
+    background-size: auto 100%;
+    margin-bottom: 1em;
+}
+.header .wrapper {
+    max-width: 750px;
     margin-right: auto;
     margin-left: auto;
     margin-bottom: 1em;
+    position: relative;
+    height: 100%;
 }
-.wrapper{
+.header .logo {
+    position: relative;
+    height: 100%;
+    margin-left: -22%;
+}
+.header .logo img {
+    display: block;
+    height: 100%;
+}
+.container {
     max-width: 750px;
     margin-left: auto;
     margin-right: auto;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+.banner{
+    height: 258px;
+    overflow: hidden;
 }
 .carousel-inner img{
     width: 100%;
 }
-.banner{
-    margin-left: 1em;
-    margin-right: 1em;
-}
-.Newest{
-    margin-bottom: 2em;
+
+.item-box {
     margin-top: 1em;
     clear: both;
     position: relative;
 }
-.Newest .content{
-    margin-bottom:1em;
-}
-.Newest .title {
+.item-box > .title {
     position: relative;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 1em;
 }
-.Newest .title .txt {
-    margin-left: 9em;
-    margin-right: 4em;
-    height: 4em;
+.item-box .title .txt {
+    margin-left: 7em;
+    padding-right: 4em;
+    height: 3em;
+    border-bottom: 1px solid #cccccc;
 }
-.Newest .title .txt span {
+.item-box .title .txt span {
     position: relative;
     display: block;
-    padding-top: 1.5em;
-    line-height: 2em;
-    border-bottom: 1px solid #cccccc;
-    font-size: 1em;
+    padding-top: 0.833em;
+    line-height: 1.666em;
+    font-size: 1.2em;
+    padding-left: 1em;
 }
-.Newest .title .icon,.Newest .title .more  {
+.item-box .title .icon,.item-box .title .more  {
     position: absolute;
     top: 0;
 }
-.Newest .title .icon {
+.item-box .title .icon {
     left: 0;
-    height: 4em;
-
+    height: 3em;
 }
-.Newest .title .icon img {
+.item-box .title .icon img {
     height: 100%;
     width: auto;
 }
-.Newest .title .more {
+.item-box .title .more {
     top: 1em;
     right: 0;
-    height: 2em;
-    line-height: 2em;
+    height: 1.5em;
+    line-height: 1.5em;
     background-color: #177ccc;
-    border-radius: 15px;
-    padding-left: 1em;
-    padding-right: 1em;
+    border-radius: 4px;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
     color: #ffffff;
 }
-.Newest img {
+.item-box .title .menu {
+    position: absolute;
+    top: 1.5em;
+    right: 0;
+    height: 1em;
+}
+.item-box .title .menu li {
+    float: left;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-left: 1px solid #dddddd;
+}
+.item-box .title .menu span {
+    display: inline-block;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+.item-box .title .menu span.cur {
+    background-color: #177ccc;
+    color: #ffffff;
+}
+.item-box .pic img {
     width: 100%;
 }
-.Newest .left-box{
-    width: 65%;
+.content,.more-box {
+    margin-left: -0.5em;
+    margin-right: -0.5em;
+    position: relative;
+}
+.movies-list li {
+    width: 33.3%;
     float: left;
 }
-.Newest .right-box{
-    width: 35%;
-    float: right;
-    top:0;
+.item-large,.item {
+    margin-left: 0.5em;
+    margin-right: 0.5em;
 }
-.Newest .right-box h4{
+.item a {
+    text-decoration: none;
+}
+.item img {
+    display: block;
+    width: 100%;
+}
+.item .info,.item-large .info{
+    padding-top: 5px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+.item-large .info {
+    text-align: left;
+    position: relative;
+}
+.item-large .title,.item-large p {
+    padding-right: 40%;
+}
+.item-large .hand {
+    position: absolute;
+    top: 0.5em;
+    right: 0;
+    height: 2em;
+}
+.item-large .hand img {
+    height: 100%;
+}
+.item-large .wjx {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+.item-large .wjx img {
+    height: 2.4em;
+}
+.item .title,.item-large .title {
+    height: 1.5em;
+    line-height: 1.5em;
+    overflow: hidden;
     color: #177ccc;
-    text-align: center;
-    line-height: 2em;
 }
-.Newest .right-box h6{
-    font-size: 0.75em;
-    text-align: center;
-    padding-bottom: 1em;
-    color: #737373;
+.item p,.item-large p {
+    font-size: 0.8em;
+    height: 1.5em;
+    line-height: 1.5em;
+    overflow: hidden;
+    color: #777777;
 }
-.Newest .right-box .text{
-    text-align: center;
-    font-size: 0.75em;
-    line-height: 1.2em;
-    color: #737373;
+.item-large p {
+    height: 2.6em;
+    line-height: 2.6em;
+    border-bottom: 1px solid #cccccc;
 }
+.newest .left-box{
+    width: 66.6%;
+    margin-right: 33.3%;
+}
+.newest .right-box{
+    width: 33.3%;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+@media (max-width: 640px)  {
+    body {
+        font-size: 14px;
+    }
+}
+@media (max-width: 480px)  {
+    body {
+        font-size: 12px;
+    }
+}
+@media (max-width: 420px)  {
+    .item-box .title .menu {
+        position: relative;
+        top: auto;
+        left: auto;
+        right: auto;
+        padding-top: 0.5em;
+    }
+}
+@media (max-width: 320px)  {
+    body {
+        font-size: 10px;
+    }
+}
+/*
+
 .Newest .right-box li {
     width: 100%;
     float: left;
@@ -164,7 +286,7 @@ body,h1,h2,h3,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,fieldset,legend,button
     padding-bottom: 1em;
     color: #737373;
 }
-/*最热*/
+/!*最热*!/
 .Hottest{
     margin-bottom: 2em;
     position: relative;
@@ -235,7 +357,7 @@ body,h1,h2,h3,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,fieldset,legend,button
     padding-bottom: 1em;
     color: #737373;
 }
-/*即将上映*/
+/!*即将上映*!/
 .Immediately{
     margin-bottom: 2em;
     position: relative;
@@ -305,7 +427,7 @@ body,h1,h2,h3,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,fieldset,legend,button
     padding-bottom: 1em;
     color: #737373;
 }
-/*分类*/
+/!*分类*!/
 .Classify{
     margin-bottom: 4em;
     position: relative;
@@ -406,3 +528,4 @@ body,h1,h2,h3,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,fieldset,legend,button
 @media screen {
     
 }
+*/
