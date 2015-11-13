@@ -1,0 +1,408 @@
+@charset "UTF-8";
+body,h1,h2,h3,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,fieldset,legend,button,input,textarea,th,td{margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary{display:block}body{overflow-x:hidden;overflow-y:auto}body,button,input,select,textarea{font:16px/1 "Microsoft YaHei", "微软雅黑", STXihei, "华文细黑", serif;color:#222}button,input,select,textarea{font-size:100%}textarea{overflow:auto;vertical-align:top}button,input{line-height:normal}button,select{text-transform:none}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}input[type="checkbox"],input[type="radio"]{vertical-align:middle}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}a{color:#177ccc}a:hover{text-decoration:underline}mark{background-color:transparent}address,cite,dfn,em,var{font-style:normal}code,kbd,pre,samp,tt{font-family:"Courier New", Courier, monospace}small{font-size:12px}ul,ol{list-style:none}abbr[title],acronym[title]{border-bottom:1px dotted;cursor:help}q:before,q:after{content:''}legend{color:#000}fieldset,img{border:none}table{border-collapse:collapse;border-spacing:0}i{font-style:normal}
+.logo{
+    max-width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 1em;
+}
+.wrapper{
+    max-width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.carousel-inner img{
+    width: 100%;
+}
+.banner{
+    margin-left: 1em;
+    margin-right: 1em;
+}
+.Newest{
+    margin-bottom: 2em;
+    margin-top: 1em;
+    clear: both;
+    position: relative;
+}
+.Newest .content{
+    margin-bottom:1em;
+}
+.Newest .title {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+.Newest .title .txt {
+    margin-left: 9em;
+    margin-right: 4em;
+    height: 4em;
+}
+.Newest .title .txt span {
+    position: relative;
+    display: block;
+    padding-top: 1.5em;
+    line-height: 2em;
+    border-bottom: 1px solid #cccccc;
+    font-size: 1em;
+}
+.Newest .title .icon,.Newest .title .more  {
+    position: absolute;
+    top: 0;
+}
+.Newest .title .icon {
+    left: 0;
+    height: 4em;
+
+}
+.Newest .title .icon img {
+    height: 100%;
+    width: auto;
+}
+.Newest .title .more {
+    top: 1em;
+    right: 0;
+    height: 2em;
+    line-height: 2em;
+    background-color: #177ccc;
+    border-radius: 15px;
+    padding-left: 1em;
+    padding-right: 1em;
+    color: #ffffff;
+}
+.Newest img {
+    width: 100%;
+}
+.Newest .left-box{
+    width: 65%;
+    float: left;
+}
+.Newest .right-box{
+    width: 35%;
+    float: right;
+    top:0;
+}
+.Newest .right-box h4{
+    color: #177ccc;
+    text-align: center;
+    line-height: 2em;
+}
+.Newest .right-box h6{
+    font-size: 0.75em;
+    text-align: center;
+    padding-bottom: 1em;
+    color: #737373;
+}
+.Newest .right-box .text{
+    text-align: center;
+    font-size: 0.75em;
+    line-height: 1.2em;
+    color: #737373;
+}
+.Newest .right-box li {
+    width: 100%;
+    float: left;
+}
+.Newest .right-box .item {
+    margin-left: 50px;
+}
+.Newest .right-box a {
+    display: block;
+}
+.Newest .info p{
+    font-size: 1.125em;
+    color: #204d74;
+    line-height: 1.5em;
+    margin-right: 30%;
+    border-bottom: 1px solid #ededee;
+}
+.Newest .info{
+    position: relative;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+.Newest .hand{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width:30%;
+}
+.Newest .hand img{
+    width: 100%;
+}
+.Newest .info p span{
+    font-size: 1em;
+    color: #9d9d9d;
+}
+.Newest .wjx{
+    width: 45%;
+    height: 2.5em;
+    position: relative;
+    background-size: 70%;
+    right: 0;
+    margin-left: 1em;
+}
+.Newest .wjx img{
+    width: 100%;
+}
+.Newest .menu li{
+    width: 33.3%;
+    float: left;
+}
+.Newest .menu .item{
+    margin-right: 10px;
+    margin-left: 10px;
+}
+.Newest .menu h4{
+    color: #177ccc;
+    text-align: center;
+    line-height: 2em;
+}
+.Newest .menu h6{
+    font-size: 0.75em;
+    text-align: center;
+    padding-bottom: 1em;
+    color: #737373;
+}
+/*最热*/
+.Hottest{
+    margin-bottom: 2em;
+    position: relative;
+    clear: both;
+}
+.Hottest .title {
+    position: relative;
+    margin-right: 1em;
+}
+.Hottest .title .txt{
+    margin-left: 9em;
+    margin-right: 4em;
+    height: 4em;
+}
+.Hottest .title .txt span {
+    position: relative;
+    display: block;
+    padding-top: 1.5em;
+    line-height: 2em;
+    border-bottom: 1px solid #cccccc;
+    font-size: 1em;
+}
+.Hottest .title .icon,.Hottest .title .more  {
+    position: absolute;
+    top: 0;
+}
+.Hottest .title .icon {
+    left: 0;
+    height: 4em;
+}
+.Hottest .title .icon img {
+    height: 100%;
+    width: auto;
+}
+.Hottest .title .more {
+    top: 1em;
+    right: 0;
+    height: 2em;
+    line-height: 2em;
+    background-color: #177ccc;
+    border-radius: 15px;
+    padding-left: 1em;
+    padding-right: 1em;
+    color: #ffffff;
+}
+.Hottest .content li {
+    width: 33.33%;
+    float: left;
+}
+.Hottest .content .item {
+    margin-right:10px;
+    margin-left: 10px;
+}
+.Hottest .content a {
+    display: block;
+}
+.Hottest img {
+    width: 100%;
+}
+.Hottest  h4{
+    color: #177ccc;
+    text-align: center;
+    line-height: 2em;
+}
+.Hottest  h6{
+    font-size: .75em;
+    text-align: center;
+    padding-bottom: 1em;
+    color: #737373;
+}
+/*即将上映*/
+.Immediately{
+    margin-bottom: 2em;
+    position: relative;
+    clear: both;
+}
+.Immediately .title {
+    position: relative;
+    margin-right: 1em;
+}
+.Immediately .title .txt{
+    margin-left: 9em;
+    margin-right: 4em;
+    height: 4em;
+}
+.Immediately .title .txt span {
+    position: relative;
+    display: block;
+    padding-top: 1.5em;
+    line-height: 2em;
+    border-bottom: 1px solid #cccccc;
+    font-size: 1em;
+}
+.Immediately .title .icon,.Immediately .title .more  {
+    position: absolute;
+    top: 0;
+}
+.Immediately .title .icon {
+    left: 0;
+    height: 4em;
+}
+.Immediately .title .icon img {
+    height: 100%;
+    width: auto;
+}
+.Immediately .title .more {
+    top: 1em;
+    right: 0;
+    height: 2em;
+    line-height: 2em;
+    background-color: #177ccc;
+    border-radius: 15px;
+    padding-left: 1em;
+    padding-right: 1em;
+    color: #ffffff;
+}
+.Immediately .content li {
+    width: 33.33%;
+    float: left;
+}
+.Immediately .content .item {
+    margin-right: 20px;
+}
+.Immediately .content a {
+    display: block;
+}
+.Immediately img {
+    width: 100%;
+}
+.Immediately  h4{
+    color: #177ccc;
+    text-align: center;
+    line-height: 2em;
+}
+.Immediately  h6{
+    font-size: .75em;
+    text-align: center;
+    padding-bottom: 1em;
+    color: #737373;
+}
+/*分类*/
+.Classify{
+    margin-bottom: 4em;
+    position: relative;
+    clear: both;
+}
+.Classify .title {
+    position: relative;
+    margin-right: 1em;
+}
+.Classify .title .txt{
+    margin-left: 9em;
+    margin-right: 80%;
+    height: 4em;
+}
+.Classify .title .txt span {
+    position: relative;
+    display: block;
+    padding-top: 1.5em;
+    line-height: 2em;
+    font-size: 1em;
+    width: 50px;
+}
+.Classify .title .icon,.Classify .title .more  {
+    position: absolute;
+    top: 0;
+}
+.Classify .title .icon {
+    left: 0;
+    height: 4em;
+
+}
+.Classify .title .icon img {
+    height: 100%;
+    width: auto;
+}
+.Classify .title .more {
+    top: 1em;
+    right: 0;
+    height: 2em;
+    line-height: 2em;
+    background-color: #177ccc;
+    border-radius: 10px;
+    padding-left: 1em;
+    padding-right: 1em;
+    color: #ffffff;
+}
+.Classify .content li {
+    width: 33.33%;
+    float: left;
+}
+.Classify .content .item {
+    margin-right: 20px;
+}
+.Classify .content a {
+    display: block;
+}
+.Classify img {
+    width: 100%;
+}
+.Classify  h4{
+    color: #177ccc;
+    text-align: center;
+    line-height: 2em;
+}
+.Classify  h6{
+    font-size: .75em;
+    text-align: center;
+    padding-bottom: 1em;
+    color: #737373;
+}
+.Classify .title{
+    position: relative;
+
+}
+.Classify .title ul{
+    position: absolute;
+    left:13em;
+    top:1.8em;
+    max-width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+}
+.Classify .show li{
+    display: inline;
+    border-left: 1px solid #ccc;
+    padding-right: .5em;
+    padding-left: .5em;
+    color: #177ccc;
+    font-size: 1.2em;
+}
+.Classify .show li:hover{
+    color: #ffffff;
+}
+.Classify .show .bg{
+    background-color: #177ccc;
+    color: #ffffff;
+}
+@media screen {
+    
+}
