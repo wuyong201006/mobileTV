@@ -1,0 +1,545 @@
+@charset "UTF-8";
+body,h1,h2,h3,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,fieldset,legend,button,input,textarea,th,td{margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,nav,section,summary{display:block}body{overflow-x:hidden;overflow-y:auto}body,button,input,select,textarea{font:16px/1 "Microsoft YaHei", "微软雅黑", STXihei, "华文细黑", serif;color:#222}button,input,select,textarea{font-size:100%}textarea{overflow:auto;vertical-align:top}button,input{line-height:normal}button,select{text-transform:none}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}input[type="checkbox"],input[type="radio"]{vertical-align:middle}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}a{color:#177ccc}a:hover{text-decoration:underline}mark{background-color:transparent}address,cite,dfn,em,var{font-style:normal}code,kbd,pre,samp,tt{font-family:"Courier New", Courier, monospace}small{font-size:12px}ul,ol{list-style:none}abbr[title],acronym[title]{border-bottom:1px dotted;cursor:help}q:before,q:after{content:''}legend{color:#000}fieldset,img{border:none}table{border-collapse:collapse;border-spacing:0}i{font-style:normal}
+.logo{
+     max-width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 1em;
+}
+
+.wrapper{
+    width: 1002px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.banner {
+    position: relative;
+}
+
+.banner-detail{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 350px;
+    height: 353px;
+    background-color: #000000;
+    filter: alpha(opacity=70);
+    -moz-opacity: 0.7;
+    opacity:0.7;
+}
+
+.banner-text-box{
+    position: absolute;
+    top: 0;
+    right: 15px;
+    width: 320px;
+}
+
+.banner-detail-text{
+    position: relative;
+    margin-left: 20px;
+    color: #ffffff;
+    z-index: 99;
+}
+
+.banner-detail-text .hand{
+    position: absolute;
+    bottom: -50px;
+    right: 0;
+}
+.bannerStar span, .wjx span{
+    color: #ffffff;
+    font-size: 2em;
+}
+
+.new-praise, .banner-praise{
+    font-size: 2em;
+}
+
+.carousel-control {
+    z-index: 999;
+}
+.banner-detail .bannerStar
+{
+    width: 100%;
+    height: 100%;
+}
+
+.banner-brief-bg{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color:#000000;
+    filter:Alpha(opacity=50);
+    -moz-opacity: 0.5;
+    opacity: 0.5;
+    width: 1002px;
+    height: 50px;
+}
+
+.banner-brief{
+    position: absolute;
+    left: 150px;
+
+    bottom: 15px;
+    z-index: 999;
+}
+
+.Newest{
+    margin-bottom: 2em;
+}
+.Newest .title {
+    position: relative;
+}
+.Newest .title .txt {
+    margin-left: 9em;
+    margin-right: 4em;
+    height: 4em;
+}
+.Newest .title .txt span {
+    position: relative;
+    display: block;
+    padding-top: 1.5em;
+    line-height: 2em;
+    border-bottom: 1px solid #cccccc;
+    font-size: 16px;
+}
+.Newest .title .icon,.Newest .title .more  {
+    position: absolute;
+    top: 0;
+}
+.Newest .title .icon {
+    left: 0;
+    height: 4em;
+}
+.Newest .title .icon img {
+    height: 100%;
+    width: auto;
+}
+.Newest .title .more {
+    top: 1em;
+    right: 0;
+    height: 2em;
+    line-height: 2em;
+    background-color: #177ccc;
+    border-radius: 10px;
+    padding-left: 1em;
+    padding-right: 1em;
+    color: #ffffff;
+}
+.Newest .left-box{
+    width: 31.7%;
+
+    float: left;
+}
+.Newest .pic img {
+    width: 100%;
+}
+
+.Newest .right-box img{
+    width: 100%;
+}
+
+.Newest .right-box{
+    width: 68.3%;
+    float: right;
+}
+.Newest .right-box h4{
+    color: #177ccc;
+    text-align: center;
+    line-height: 2em;
+}
+.Newest .right-box h6{
+    font-size: 10px;
+    text-align: center;
+    padding-bottom: 1em;
+    color: #737373;
+}
+.Newest .right-box .text{
+    text-align: center;
+    font-size: 10px;
+    line-height: 1.2em;
+    color: #737373;
+}
+.Newest .right-box li {
+    width: 25%;
+    float: left;
+}
+.Newest .right-box .item {
+    margin-left: 20px;
+}
+.Newest .right-box a {
+    display: block;
+}
+.Newest .info p{
+    font-size: 18px;
+    color: #204d74;
+    line-height: 1.5em;
+    margin-right: 30%;
+    border-bottom: 1px solid #ededee;
+}
+.Newest .info{
+    position: relative;
+}
+
+.Newest .hand{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width:30%;
+}
+/*.Newest .hand img{*/
+    /*width: 100%;*/
+/*}*/
+.Newest .info p span{
+    font-size: 16px;
+    color: #9d9d9d;
+}
+/*.Newest .wjx{*/
+
+    /*/!*width: 62%;*!/*/
+    /*height: 3em;*/
+    /*position: relative;*/
+    /*background-size: 80%;*/
+    /*right: 0;*/
+/*}*/
+/*.Newest .wjx img{*/
+    /*width: 100%;*/
+/*}*/
+/*最热*/
+.Hottest{
+    margin-bottom: 2em;
+}
+.Hottest .title {
+    position: relative;
+}
+.Hottest .title .txt{
+    margin-left: 9em;
+    margin-right: 4em;
+    height: 4em;
+}
+.Hottest .title .txt span {
+    position: relative;
+    display: block;
+    padding-top: 1.5em;
+    line-height: 2em;
+    border-bottom: 1px solid #cccccc;
+    font-size: 16px;
+}
+.Hottest .title .icon,.Hottest .title .more  {
+    position: absolute;
+    top: 0;
+}
+.Hottest .title .icon {
+    left: 0;
+    height: 4em;
+}
+.Hottest .title .icon img {
+    height: 100%;
+    width: auto;
+}
+.Hottest .title .more {
+    top: 1em;
+    right: 0;
+    height: 2em;
+    line-height: 2em;
+    background-color: #177ccc;
+    border-radius: 15px;
+    padding-left: 1em;
+    padding-right: 1em;
+    color: #ffffff;
+}
+.Hottest .content li {
+    width: 16.66%;
+    float: left;
+}
+.Hottest .content .item {
+    margin-left: 0.93em;
+    position: relative;
+}
+
+.Hottest .mark{
+    position: absolute;
+    background: url("../images/mark.png") no-repeat;
+    bottom: 81px;
+    width: 50px;
+    height:50px;
+    background-size: 100% auto;
+}
+
+.Hottest .content a {
+    display: block;
+}
+.Hottest img {
+    width: 100%;
+}
+.Hottest  h4{
+    color: #177ccc;
+    text-align: center;
+    line-height: 2em;
+}
+.Hottest  h6{
+    font-size: 10px;
+    text-align: center;
+    padding-bottom: 1em;
+    color: #737373;
+}
+/*即将上映*/
+.Immediately{
+    margin-bottom: 2em;
+}
+.Immediately .title {
+    position: relative;
+}
+.Immediately .title .txt{
+    margin-left: 9em;
+    margin-right: 4em;
+    height: 4em;
+}
+.Immediately .title .txt span {
+    position: relative;
+    display: block;
+    padding-top: 1.5em;
+    line-height: 2em;
+    border-bottom: 1px solid #cccccc;
+    font-size: 16px;
+}
+.Immediately .title .icon,.Immediately .title .more  {
+    position: absolute;
+    top: 0;
+}
+.Immediately .title .icon {
+    left: 0;
+    height: 4em;
+}
+.Immediately .title .icon img {
+    height: 100%;
+    width: auto;
+}
+.Immediately .title .more {
+    top: 1em;
+    right: 0;
+    height: 2em;
+    line-height: 2em;
+    background-color: #177ccc;
+    border-radius: 10px;
+    padding-left: 1em;
+    padding-right: 1em;
+    color: #ffffff;
+}
+.Immediately .content li {
+    width: 16.66%;
+    float: left;
+}
+.Immediately .content .item {
+    margin-left: 15px;
+}
+.Immediately .content a {
+    display: block;
+}
+.Immediately img {
+    width: 100%;
+}
+.Immediately  h4{
+    color: #177ccc;
+    text-align: center;
+    line-height: 2em;
+}
+.Immediately  h6{
+    font-size: 10px;
+    text-align: center;
+    padding-bottom: 1em;
+    color: #737373;
+}
+/*分类*/
+.Classify{
+    margin-bottom: 4em;
+}
+.Classify .title {
+    position: relative;
+}
+.Classify .title .txt{
+    margin-left: 9em;
+   margin-right: 80%;
+    height: 4em;
+}
+.Classify .title .txt span {
+    position: relative;
+    display: block;
+    padding-top: 1.5em;
+    line-height: 2em;
+
+    font-size: 16px;
+}
+.Classify .title .icon,.Classify .title .more  {
+    position: absolute;
+    top: 0;
+}
+.Classify .title .icon {
+    left: 0;
+    height: 4em;
+}
+.Classify .title .icon img {
+    height: 100%;
+    width: auto;
+}
+.Classify .title .more {
+    top: 1em;
+    right: 0;
+    height: 2em;
+    line-height: 2em;
+    background-color: #177ccc;
+    border-radius: 10px;
+    padding-left: 1em;
+    padding-right: 1em;
+    color: #ffffff;
+}
+.Classify .content li {
+    width: 16.66%;
+    float: left;
+}
+.Classify .content .item {
+    margin-left: 15px;
+}
+.Classify .content a {
+    display: block;
+}
+.Classify img {
+    width: 100%;
+}
+.Classify  h4{
+    color: #177ccc;
+    text-align: center;
+    line-height: 2em;
+}
+.Classify  h6{
+    font-size: 10px;
+    text-align: center;
+    padding-bottom: 1em;
+    color: #737373;
+}
+.Classify .title{
+    position: relative;
+
+}
+.Classify .title ul{
+    position: absolute;
+   left:12em;
+    top:1.8em;
+}
+.Classify .show li{
+    display: inline;
+    border-left: 1px solid #ccc;
+    padding-right: 1em;
+    padding-left: 1em;
+    color: #177ccc;
+    font-size: 1.3em;
+}
+.Classify .show li:hover{
+    color: #ffffff;
+
+}
+.Classify .show .bg{
+    background-color: #177ccc;
+    width: 10px;
+    height: 10px;
+    color: #ffffff;
+}
+
+.moreFilm li {
+    width: 16.66%;
+    float: left;
+}
+
+.moreFilm .item {
+    margin-left: 15px;
+}
+
+.moreFilm img {
+    width: 100%;
+}
+.moreFilm  h4{
+    color: #177ccc;
+    text-align: center;
+    line-height: 2em;
+}
+.moreFilm  h6{
+    font-size: 10px;
+    text-align: center;
+    padding-bottom: 1em;
+    color: #737373;
+}
+
+.moreFilm ul{
+    /*position: absolute;*/
+    left:12em;
+}
+.moreFilm .show li{
+    display: inline;
+    border-left: 1px solid #ccc;
+    padding-right: 1em;
+    padding-left: 1em;
+    color: #177ccc;
+    font-size: 1.3em;
+}
+.moreFilm .show li:hover{
+    color: #ffffff;
+
+}
+.moreFilm .show .bg{
+    background-color: #177ccc;
+    width: 10px;
+    height: 10px;
+    color: #ffffff;
+}
+
+.right-box .item a {
+    display: block;
+    position: relative;
+}
+.right-box .item img {
+    display: block;
+    width: 100%;
+}
+.right-box .item .mark {
+    background: url("../images/mark.png") no-repeat;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height:60px;
+    background-size: 100% auto;
+    font-size: 1.5em;
+    text-align: left;
+    line-height: 3.6em;
+    color: #ffffff;
+}
+.item a{
+    display: block;
+    position: relative;
+}
+.item img{
+    display: block;
+    width: 100%;
+}
+.item .mark{
+    background: url("../images/mark.png") no-repeat;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height:60px;
+    background-size: 100% auto;
+    font-size: 1.5em;
+    text-align: left;
+    line-height: 3.6em;
+    color: #ffffff;
+}
+
+.carousel-inner{
+    cursor: pointer;
+}
+

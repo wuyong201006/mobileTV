@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html class="media-page code-item">
+<head lang="zh_CN">
+    <meta charset="UTF-8">
+    <title>专辑：</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=640,user-scalable=no,target-densitydpi=285"/>
+</head>
+<body>
+<div class="my-video">
+    <div id="myVideo">Loading the player...</div>
+</div>
+<!--<div style="text-align: center;">-->
+    <!--<video id="v1" width="320" height="240" controls="" onmouseover="this.play()">-->
+        <!--<source src="http://192.168.28.220/abc.mp4">html5 video</video>-->
+<!--</div>-->
+<!--<div style="text-align: center;">-->
+    <!--<button onclick="video.play()">▶</button>-->
+    <!--<button onclick="video.pause()">◼</button>-->
+    <!--<button onclick="video.volume += 0.25">Volume Up</button>-->
+    <!--<button onclick="video.volume -= 0.25">Volume Down</button>-->
+    <!--<button onclick="video.muted = true">Mute</button>-->
+    <!--<button onclick="video.muted = false">Unmute</button>-->
+    <!--<button onclick="rotateMe()">Start Rotation</button>-->
+    <!--<button onclick="int=window.clearInterval(int);resetRotation()">Stop Rotation</button>-->
+<!--</div>-->
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jwplayer/jwplayer.js"></script>
+<script type="text/javascript">jwplayer.key="DNFxpxvc9p8jGqZLsgNv4Rt0hW3O5lw2wxtz7g==";</script>
+<script type="text/javascript">
+    $(function() {
+        init();
+    });
+    function init(){
+        var url = location.search.split("=")[1];
+        url = "http://127.0.0.1/vod/"+url;
+        jwplayer_setup(url,"",true);
+    }
+    function switch_play(url,thumbnail,autoplay) {
+        jwplayer("myVideo").load([{file:url,image: thumbnail,type:"video/mp4"}]);
+        if(autoplay){
+            jwplayer("myVideo").play(true);
+        }
+    };
+    function jwplayer_setup(url,thumbnail,autoplay){
+        jwplayer("myVideo").setup({
+            file:url,
+            image:thumbnail,
+            width: screen.availWidth,
+            height: screen.availHeight
+        });
+        if(autoplay){
+            jwplayer("myVideo").play(true);
+        }
+    }
+</script>
+</body>
+</html>

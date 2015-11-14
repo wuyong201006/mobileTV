@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="css/mobile-phone.css?t=14354325413"/>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <title>移动影视-手机版</title>
+    <script type="text/javascript">
+        var IsPhone = true;
+//        var u = navigator.userAgent;
+//        if (u.indexOf('Android') > -1 || u.indexOf('iPhone') > -1 || u.indexOf('Mobile') > -1) {
+//            location.href = "mobile-phone.html";
+//            IsPhone = true;
+//        }
+    </script>
+</head>
+<body>
+<div class="header">
+    <div class="wrapper">
+        <div class="logo"><img src="images/phone/logo.png"></div>
+    </div>
+</div>
+<div class="container">
+    <div class="banner">
+        <div id="myCarousel" class="carousel slide">
+            <!-- 轮播（Carousel）指标 -->
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+            <!-- 轮播（Carousel）项目 -->
+            <div id="banner" class="carousel-inner">
+                <div class="item active">
+                    <div class="L-btn"></div>
+                    <div class="R-btn"></div>
+                    <img src="images/banner4.jpg" alt="First slide">
+                </div>
+                <div class="item">
+                    <div class="L-btn"></div>
+                    <div class="R-btn"></div>
+                    <img src="images/banner2.jpg" alt="Second slide">
+                </div>
+                <div class="item ">
+                    <div class="L-btn"></div>
+                    <div class="R-btn"></div>
+                    <img src="images/banner3.jpg" alt="Third slide">
+                </div>
+            </div>
+            <!-- 轮播（Carousel）导航 -->
+            <a class="carousel-control left" href="#myCarousel"
+               data-slide="prev"></a>
+            <a class="carousel-control right" href="#myCarousel"
+               data-slide="next"></a>
+        </div>
+        <div class="banner-detail-info">
+            <div class="banner-detail-bg">
+            </div>
+            <div class="banner-detail">
+                <div class="banner-box">
+                <h2 id="bannerTitle" class="banner-title">滚蛋滚蛋滚蛋滚蛋</h2>
+                <h5 class="banner-introduction">剧情介绍：</h5>
+                <span id="bannerDetail" class="banner-detail-detail">插画师插画师</span><br/><br/>
+                <div><span>主演:</span><span id="bannerActor">白百合</span></div>
+                <div id="bannerStar" class="banner-star"><img src="images/star.png"/></div>
+                <div class="hand"><img src="images/hand.png"/><span id="bannerPraise" class="banner-praise">999999</span></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="banner-brief-bg">
+
+        </div>
+        <div class="banner-brief">
+            <span id="bannerBrief">你不哭 我们替你哭</span>
+        </div>
+    </div>
+    <div id="newest" class="newest item-box">
+        <div class="title">
+            <div class="icon"><img src="images/phone/newest--pc.png"></div>
+            <div class="txt"><span>上映</span></div>
+            <a id="newBtn" class="more" href="#">更多</a>
+        </div>
+        <div class="content">
+            <div class="left-box">
+                <div id="leftBox" class="item-large">
+                    <div class="pic">
+                        <img src="images/left-pic.jpg">
+                    </div>
+                    <div class="info">
+                        <h3 id="newTitle" class="title">第三种爱情</h3>
+
+                        <p id="newDetail">刘亦菲宋承宪定情之作</p>
+
+                        <div class="hand"><img src="images/hand.png"><span id="newPraise" class="new-praise"></span></div>
+                        <div id="newStarLevel" class="wjx"><img src="images/wjx.png"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="newBox" class="right-box">
+                <ul>
+                    <li>
+                        <div class="item">
+                            <a href="">
+                                <div class="pic">
+                                    <img src="images/02.png">
+
+                                    <div class="pic-rating">
+                                        <span class="rating">5.0</span>
+                                        <span class="bg"></span>
+                                    </div>
+                                </div>
+                                <div class="info">
+                                    <h3 class="title">我是路人甲</h3>
+
+                                    <p>三角关系紧锁秦岚</p>
+                                </div>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item">
+                            <a href="">
+                                <div class="pic">
+                                    <img src="images/02.png">
+
+                                    <div class="pic-rating">
+                                        <span class="rating">5.0</span>
+                                        <span class="bg"></span>
+                                    </div>
+                                </div>
+                                <div class="info">
+                                    <h3 class="title">我是路人甲</h3>
+
+                                    <p>三角关系紧锁秦岚</p>
+                                </div>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="newBox2" class="more-box">
+            <ul class="movies-list  clearfix">
+                <li>
+                    <div class="item">
+                        <a href="">
+                            <div class="pic">
+                                <img src="images/02.png">
+
+                                <div class="pic-rating">
+                                    <span class="rating">5.0</span>
+                                    <span class="bg"></span>
+                                </div>
+                            </div>
+                            <div class="info">
+                                <h3 class="title">我是路人甲</h3>
+
+                                <p>三角关系紧锁秦岚</p>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div class="item">
+                        <a href="">
+                            <div class="pic">
+                                <img src="images/02.png">
+
+                                <div class="pic-rating">
+                                    <span class="rating">5.0</span>
+                                    <span class="bg"></span>
+                                </div>
+                            </div>
+                            <div class="info">
+                                <h3 class="title">我是路人甲</h3>
+
+                                <p>三角关系紧锁秦岚</p>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div class="item">
+                        <a href="">
+                            <div class="pic">
+                                <img src="images/02.png">
+
+                                <div class="pic-rating">
+                                    <span class="rating">5.0</span>
+                                    <span class="bg"></span>
+                                </div>
+                            </div>
+                            <div class="info">
+                                <h3 class="title">我是路人甲</h3>
+
+                                <p>三角关系紧锁秦岚</p>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div id="newMoreBox" class="more-box">
+        </div>
+    </div>
+    <div id="hotTest" class="hottest  item-box">
+        <div class="title">
+            <div class="icon"><img src="images/phone/hostest.png"></div>
+            <div class="txt"><span>上映</span></div>
+            <a id="hotBtn" class="more" href="#">更多</a>
+        </div>
+        <div id="hotBox" class="content clearfix">
+            <ul class="movies-list  clearfix">
+                <li>
+                    <div class="item">
+                        <a href="">
+                            <div class="pic">
+                                <img src="images/02.png">
+
+                                <div class="pic-rating">
+                                    <span class="rating">5.0</span>
+                                    <span class="bg"></span>
+                                </div>
+                            </div>
+                            <div class="info">
+                                <h3 class="title">我是路人甲</h3>
+
+                                <p>三角关系紧锁秦岚</p>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div class="item">
+                        <a href="">
+                            <div class="pic">
+                                <img src="images/02.png">
+
+                                <div class="pic-rating">
+                                    <span class="rating">5.0</span>
+                                    <span class="bg"></span>
+                                </div>
+                            </div>
+                            <div class="info">
+                                <h3 class="title">我是路人甲</h3>
+
+                                <p>三角关系紧锁秦岚</p>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div class="item">
+                        <a href="">
+                            <div class="pic">
+                                <img src="images/02.png">
+
+                                <div class="pic-rating">
+                                    <span class="rating">5.0</span>
+                                    <span class="bg"></span>
+                                </div>
+                            </div>
+                            <div class="info">
+                                <h3 class="title">我是路人甲</h3>
+
+                                <p>三角关系紧锁秦岚</p>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div id="hotMoreBox" class="more-box">
+        </div>
+    </div>
+    <div id="immeDiately" class="immediately item-box">
+        <div class="title">
+            <div class="icon"><img src="images/phone/Imd.png"></div>
+            <div class="txt"><span>上映</span></div>
+            <a id="futureBtn" class="more" href="#">更多</a>
+        </div>
+        <div id="futureBox" class="content">
+            <ul class="movies-list  clearfix">
+                <li>
+                    <div class="item">
+                        <a href="">
+                            <div class="pic">
+                                <img src="images/02.png">
+                                <span class="pic-title">11月16日</span>
+                            </div>
+                            <div class="info">
+                                <h3 class="title">我是路人甲</h3>
+
+                                <p>三角关系紧锁秦岚</p>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div class="item">
+                        <a href="">
+                            <div class="pic">
+                                <img src="images/02.png">
+                                <span class="pic-title">11月16日</span>
+                            </div>
+                            <div class="info">
+                                <h3 class="title">我是路人甲</h3>
+
+                                <p>三角关系紧锁秦岚</p>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div class="item">
+                        <a href="">
+                            <div class="pic">
+                                <img src="images/02.png">
+                                <span class="pic-title">11月16日</span>
+                            </div>
+                            <div class="info">
+                                <h3 class="title">我是路人甲</h3>
+
+                                <p>三角关系紧锁秦岚</p>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div class="item">
+                        <a href="">
+                            <div class="pic">
+                                <img src="images/02.png">
+                                <span class="pic-title">11月16日</span>
+                            </div>
+                            <div class="info">
+                                <h3 class="title">我是路人甲</h3>
+
+                                <p>三角关系紧锁秦岚</p>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div class="item">
+                        <a href="">
+                            <div class="pic">
+                                <img src="images/02.png">
+                                <span class="pic-title">11月16日</span>
+                            </div>
+                            <div class="info">
+                                <h3 class="title">我是路人甲</h3>
+
+                                <p>三角关系紧锁秦岚</p>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div class="item">
+                        <a href="">
+                            <div class="pic">
+                                <img src="images/02.png">
+                                <span class="pic-title">11月16日</span>
+                            </div>
+                            <div class="info">
+                                <h3 class="title">我是路人甲</h3>
+
+                                <p>三角关系紧锁秦岚</p>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div id="futureMoreBox" class="more-box">
+        </div>
+    </div>
+    <div id="classify" class="classify item-box">
+        <div class="title">
+            <div class="icon"><img src="images/phone/Cla.png"></div>
+            <div class="txt">
+                <span>分类</span>
+            </div>
+            <ul id="calssifyTabNav" class="menu">
+                <li class="cur"><span>爱情</span></li>
+                <li><span>动作</span></li>
+                <li><span>喜剧</span></li>
+                <li><span>冒险</span></li>
+                <li><span>恐怖</span></li>
+                <li><span>悬疑</span></li>
+                <li><span>动画</span></li>
+            </ul>
+        </div>
+        <div id="calssifyBox" class="content clearfix">
+            <ul class="movies-list  clearfix">
+                <li>
+                    <div class="item">
+                        <a href="">
+                            <div class="pic">
+                                <img src="images/02.png">
+
+                                <div class="pic-rating">
+                                    <span class="rating">5.0</span>
+                                    <span class="bg"></span>
+                                </div>
+                            </div>
+                            <div class="info">
+                                <h3 class="title">我是路人甲</h3>
+
+                                <p>三角关系紧锁秦岚</p>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div class="item">
+                        <a href="">
+                            <div class="pic">
+                                <img src="images/02.png">
+
+                                <div class="pic-rating">
+                                    <span class="rating">5.0</span>
+                                    <span class="bg"></span>
+                                </div>
+                            </div>
+                            <div class="info">
+                                <h3 class="title">我是路人甲</h3>
+
+                                <p>三角关系紧锁秦岚</p>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div class="item">
+                        <a href="">
+                            <div class="pic">
+                                <img src="images/02.png">
+
+                                <div class="pic-rating">
+                                    <span class="rating">5.0</span>
+                                    <span class="bg"></span>
+                                </div>
+                            </div>
+                            <div class="info">
+                                <h3 class="title">我是路人甲</h3>
+
+                                <p>三角关系紧锁秦岚</p>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div class="item">
+                        <a href="">
+                            <div class="pic">
+                                <img src="images/02.png">
+
+                                <div class="pic-rating">
+                                    <span class="rating">5.0</span>
+                                    <span class="bg"></span>
+                                </div>
+                            </div>
+                            <div class="info">
+                                <h3 class="title">我是路人甲</h3>
+
+                                <p>三角关系紧锁秦岚</p>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div class="item">
+                        <a href="">
+                            <div class="pic">
+                                <img src="images/02.png">
+
+                                <div class="pic-rating">
+                                    <span class="rating">5.0</span>
+                                    <span class="bg"></span>
+                                </div>
+                            </div>
+                            <div class="info">
+                                <h3 class="title">我是路人甲</h3>
+
+                                <p>三角关系紧锁秦岚</p>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div class="item">
+                        <a href="">
+                            <div class="pic">
+                                <img src="images/02.png">
+
+                                <div class="pic-rating">
+                                    <span class="rating">5.0</span>
+                                    <span class="bg"></span>
+                                </div>
+                            </div>
+                            <div class="info">
+                                <h3 class="title">我是路人甲</h3>
+
+                                <p>三角关系紧锁秦岚</p>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+</div>
+<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/mobileTV.js"></script>
+<script type="text/javascript">
+    $(function(){
+        init();
+    })
+</script>
+</body>
+

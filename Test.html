@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title></title>
+
+    <style>
+        .leftBox, .rightBox, #div1,#div2
+        {
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <div id="newBox">
+        <div class="leftBox">
+            <img src="images/pc1_10.png"/>
+        </div>
+        <div class="rightBox">
+            <div id="div1">
+                <img src="images/pc1_15.png"/>
+                <a class="label1">别有动机</a>
+            </div>
+            <div id="div2">
+                <img src="images/pc1_12.png"/>
+                <a class="label1">小王子</a>
+            </div>
+        </div>
+    </div>
+    <div id="newMoreBox">
+        <img />
+    </div>
+
+    <div>
+        <button id="newBtn">更多</button>
+        <button id="hotBtn">更多</button>
+    </div>
+
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/mobileTV.js"></script>
+    <script type="text/javascript">
+        init();
+       console.info( $("#new").children("div").length);
+        $newBox.find("#div2").find(a).href()
+    </script>
+</body>
+</html>
