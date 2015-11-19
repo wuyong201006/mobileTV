@@ -22,15 +22,15 @@ const STARURL = PATH+"images/star.png";
 
 var NEWRESLENGTH = 5;
 var HOTRESLENGTH = 3;
-var FUTURERESLENGTH = 3;
+var FUTURERESLENGTH = 6;
 //电影一排长度
 if(IsPhone){
     NEWRESLENGTH = 5;
     HOTRESLENGTH = 3;
-    FUTURERESLENGTH = 3;
+    FUTURERESLENGTH = 6;
 }else{
     NEWRESLENGTH = 8;
-    HOTRESLENGTH = 3;
+    HOTRESLENGTH = 6;
     FUTURERESLENGTH = 6;
 }
 
@@ -65,7 +65,8 @@ var $bannerStar = $("#bannerStar");
 var $bannerPraise = $("#bannerPraise");
 var $bannerBrief = $("#bannerBrief");
 
-var $newLeftBg = $("#leftBox").children("div").eq(0).find("img");
+var $leftBox = $("#leftBox")
+var $newLeftBg = $leftBox.children("div").eq(0).find("img");
 var $newTitle = $("#newTitle");
 var $newDetail = $("#newDetail");
 var $newStarLevel = $("#newStarLevel");
@@ -230,7 +231,7 @@ function getDesignatedArray(list, len, startIndex) {
         return list.length >= len ? list.slice(0, len) : list;
     }
     else {
-        return list.length >= startIndex ? list.slice(startIndex, list.length - startIndex) : null;
+        return list.length >= startIndex ? list.slice(startIndex, list.length) : null;
     }
 }
 
@@ -302,7 +303,7 @@ function validate(data)
     return url;
 }
 function filmPlay(data) {
-    console.info(data.resFileList[0].resFileInfo.localFileName);
+    //console.info(data.resFileList[0].resFileInfo.localFileName);
     var url = "video/prevue/ChQoM1XMeoeALpBDCcjwAGRau3U8450.mp4";
     if(IsPhone){
         location.href = "player/mobilePlayer.html?url="+validate(data);
@@ -311,31 +312,70 @@ function filmPlay(data) {
         location.href = "player/player.html?url="+validate(data);
             //validate(data);
     }
+    return false;
 }
 
 var dataObject = {};
 function moreRefres(list, parent, name) {
     if (list == null || parent == null)return;
-    dataObject.name = list;
-    var box;
+    dataObject[name] = list;
+    var box='';
+    var i=0;
+    if(name == "future"){
+
+        if(IsPhone){
+            box += '<ul class="movies-list">'
+        }else{
+            box +='<div class="list"><ul>'
+        }
+
+        for(i=0;i<list.length;i++){
+            var data = list[i];
+            if(data.resInfo === undefined || data.resInfo.remoteImgSmall === undefined)
+                continue;
+            var idString = i+","+name;
+            var jsonData = JSON.stringify(data);
+            if(IsPhone){
+                box += '<li id="'+idString+'" onclick="filmMore($(this))"><div class="item"><a>' +
+                    '<div class="pic"><img src="'+PATH+data.resInfo.remoteImgSmall+'"/><span class="pic-title">2015</span>' +
+                    '</div><div class="info"><h3 class="title">"'+data.resInfo.title+'"</h3><p>"'+getDetail(data)+'"</p></div></a></div></li>';
+            }else{
+                box += '<li id="'+idString+'" onclick="filmMore($(this))"><div class="item"><a>' +
+                    '<img src="'+PATH+data.resInfo.remoteImgSmall+'"/><div class="Lucency">2015</div></a>' +
+                    '<div class="info"><h4>"'+data.resInfo.title+'"</h4><h6>"'+getDetail(data)+'"</h6></div></div>';
+            }
+        }
+
+        if(IsPhone){
+            box += '</ul>';
+        }else{
+            box += "</ul></div>";
+        }
+
+        parent.html(box);
+        return false;
+    }
+
     if(IsPhone){
         box = '<ul class="movies-list">';
     }else{
-        box = '<div class="list"><ul class="show">';
+        box = '<div class="list"><ul>';
     }
-    for (var i = 0; i < list.length; i++) {
+    for (i = 0; i < list.length; i++) {
         var data = list[i];
         if (data.resInfo === undefined || data.resInfo.remoteImgSmall === undefined)
             continue;
         var idString = i+","+name;
+        var jsonData = JSON.stringify(data);
         if(IsPhone){
-            box += '<li><div class="item" onclick="function(e){filmPlay(dataObject[filmMore($(this).attr("id")])}"><a href="">' +
+            box += '<li id="'+idString+'" onclick="filmMore($(this))"><div class="item"><a>' +
                 '<div class="pic"><img src="'+PATH+data.resInfo.remoteImgSmall+'"/><div class="pic-rating">' +
                 '<span class="rating">"'+getStarLevel()+'"</span><span class="bg"></span></div></div><div class="info">' +
                 '<h3 class="title">"'+data.resInfo.title+'"</h3><p>"'+getDetail(data)+'"</p> </div></a></div></li>';
         }else {
-            box += '<li><div class="item"  onclick="function(e){filmPlay(dataObject[filmMore($(this).attr("id")])}">' +
-                '<a href=""><img src="' + PATH + data.resInfo.remoteImgSmall + '"/><div class="mark">"'+getStarLevel()+'"</div></a>' +
+            //filmPlay(JSON.parse($(this).film)) data-film="jsonData"
+            box += '<li id="'+idString+'" onclick="filmMore($(this))"><div class="item">' +
+                '<a><img src="' + PATH + data.resInfo.remoteImgSmall + '"/><div class="mark">"'+getStarLevel()+'"</div></a>' +
                 '<div class="info"><h4>"' + data.resInfo.title + '"</h4><h6>"' + getDetail(data) + '"</h6></div></div></li>';
         }
     }
@@ -349,10 +389,24 @@ function moreRefres(list, parent, name) {
     parent.html(box);
 }
 
-function filmMore(str)
-{
-    var ar = str.split(",");
-    return ar[1][ar[0]];
+function filmMore($res){
+    //var data = JSON.parse($res.getAttribute("data-film"));
+    var id = $res.attr("id");
+    var arr = id.split(",");
+    var index=-1;
+    var data;
+    if(arr.length > 0)
+        index = arr[0];
+    if(arr.length > 1)
+        id = arr[1];
+    var list = dataObject[id];
+    if(list != undefined && list.length > index)
+        data = list[index];
+
+    if(data === undefined)
+        return;
+
+    filmPlay(data);
 }
 
 //清除显示
@@ -414,6 +468,10 @@ function newRefresLeft() {
     $newLeftBg.attr("src", PATH+data.resInfo.remoteImgNormal);
     $newTitle.html(data.resInfo.title);
     $newDetail.html(getDetail(data));
+    $leftBox.data("data", data);
+    $leftBox.click(function(e){
+        filmPlay($(this).data("data"));
+    })
 }
 
 //电影刷新
@@ -426,13 +484,15 @@ function filmRefres(resList, dataList) {
         var data = dataList[i];
         if (data.resInfo === undefined || data.resInfo.remoteImgSmall === undefined)
             continue;
+
+        res.find("a").removeAttr("href");
         res.data("data", data);
         res.find("img").attr("src", PATH+data.resInfo.remoteImgSmall);
-        res.find("a").attr("href", "player.html?url="+validate(data));
         if(IsPhone){
             res.find("h3").html(data.resInfo.title);
             res.find("p").html(getDetail(data));
-            res.find(".rating").text(getStarLevel()*2);
+            res.find(".rating") && res.find(".rating").text(getStarLevel()*2);
+            res.find(".pic-title") && res.find(".pic-title").text("2015");
 
         }else{
 
@@ -446,6 +506,14 @@ function filmRefres(resList, dataList) {
             filmPlay($(this).data("data"));
         });
     }
+}
+
+function linkTo(res){
+    if(res.parent("li").content === undefined){
+        return;
+    }
+    var data = res.parent("li").data("data");
+    filmPlay(data)
 }
 
 function getDetail(data)
@@ -474,10 +542,10 @@ function filmStar(res, level)
     len = parseInt(level);
     var html = "";
     for(var i=0;i<level;i++){
-        html += '<img width=39 height=37 src="'+STARURL+'">';
+        html += '<img src="'+STARURL+'">';
     }
 
-    html += '<span>  "'+level*2+'"</span>';
+    html += '<span>  '+level*2+'</span>';
     res.html(html);
 }
 
@@ -494,17 +562,18 @@ function calssifyFilm(data) {
 
     if(tag.indexOf(PREVUE) > 0){
         futurelist.push(data);
-        headlist.push(data);
+        //headlist.push(data);
     }
 
     if (tag.indexOf(AFFECTIONAL) > 0) {
         affectionalList.push(data);
         hotlist.push(data);
-        //headlist.push(data);
+        headlist.push(data);
         return;
     }
     if (tag.indexOf(ACTION) > 0) {
         actionList.push(data);
+        //futurelist.push(data);
         return;
     }
     if (tag.indexOf(COMEDY) > 0) {

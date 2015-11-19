@@ -13,77 +13,133 @@ body,h1,h2,h3,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,fieldset,legend,button
     margin-right: auto;
 }
 
-.banner {
+.banner{
+    width: 100%;
     position: relative;
 }
 
 .banner-detail{
-    position: absolute;
-    top: 0;
-    right: 0;
     width: 350px;
     height: 353px;
     background-color: #000000;
     filter: alpha(opacity=70);
     -moz-opacity: 0.7;
     opacity:0.7;
+
+    line-height: 1em;
 }
 
-.banner-text-box{
+.banner-detail-box{
     position: absolute;
     top: 0;
-    right: 15px;
-    width: 320px;
+    right: 0;
+
+    width: 350px;
+    height: 353px;
 }
 
 .banner-detail-text{
-    position: relative;
-    margin-left: 20px;
+    position: absolute;
+    top: 15px;
+    left: 15px;
     color: #ffffff;
     z-index: 99;
+    width: 95%;
+}
+
+.banner-detail-text .title{
+    font-size: 2em;
+}
+
+.banner-detail-text .tv-title{
+    font-size: 1.5em;
+}
+
+.banner-detail-text .detail-box{
+    height: 112px;
+}
+
+.banner-detail-text .banner-gap{
+    border-bottom: 1px solid #cccccc;
+    margin-bottom: 6%;
+}
+
+.banner-detail-text .actor{
+    font-size: 1.5em;
+}
+
+.banner-detail-text .actor-content{
+    font-size: 1.2em;
 }
 
 .banner-detail-text .hand{
     position: absolute;
-    bottom: -50px;
+    bottom: -30px;
     right: 0;
+
+    width: 106px;
+    height: 41px;
 }
-.bannerStar span, .wjx span{
+
+.banner-detail-text .hand .banner-praise{
+    position: absolute;
+    bottom: 0;
+}
+
+.banner-detail-text .hand img, .left-box .info .hand img{
+    width: 2.4225em;
+    height: 2.9777em;
+}
+
+.bannerStar img, .wjx img{
+    width: 2.5em;
+    height: 2.3125em;
+}
+
+.bannerStar span{
     color: #ffffff;
     font-size: 2em;
 }
 
-.new-praise, .banner-praise{
+.wjx span{
     font-size: 2em;
+}
+
+.new-praise, .banner-praise{
+    font-size: 1.5em;
 }
 
 .carousel-control {
     z-index: 999;
 }
-.banner-detail .bannerStar
-{
+
+.carousel{
+    position: relative;
+}
+
+.banner-brief-box{
+    position: absolute;
+    left: 0;
+    bottom: 0;
     width: 100%;
-    height: 100%;
+    height: 50px;
 }
 
 .banner-brief-bg{
-    position: absolute;
-    bottom: 0;
-    left: 0;
     background-color:#000000;
-    filter:Alpha(opacity=50);
-    -moz-opacity: 0.5;
-    opacity: 0.5;
-    width: 1002px;
+    filter:Alpha(opacity=72);
+    -moz-opacity: 0.72;
+    opacity: 0.72;
+    width: 100%;
     height: 50px;
 }
 
 .banner-brief{
     position: absolute;
-    left: 150px;
-
-    bottom: 15px;
-    z-index: 999;
+    left: 2%;
+    top: 35%;
+    color: #ffffff;
+    /*z-index: 999;*/
 }
 
 .Newest{
@@ -112,10 +168,12 @@ body,h1,h2,h3,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,fieldset,legend,button
 .Newest .title .icon {
     left: 0;
     height: 4em;
+    margin-top: 1em;
 }
 .Newest .title .icon img {
-    height: 100%;
-    width: auto;
+    height: 70%;
+    width: 70%;
+    top: 10px;
 }
 .Newest .title .more {
     top: 1em;
@@ -135,6 +193,7 @@ body,h1,h2,h3,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,fieldset,legend,button
 }
 .Newest .pic img {
     width: 100%;
+    /*padding-bottom: 120.4%;*/
 }
 
 .Newest .right-box img{
@@ -172,6 +231,13 @@ body,h1,h2,h3,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,fieldset,legend,button
 .Newest .right-box a {
     display: block;
 }
+
+.Newest .info .info-top{
+    margin-bottom: 15px;
+
+    line-height: 2em;
+}
+
 .Newest .info p{
     font-size: 18px;
     color: #204d74;
@@ -187,8 +253,21 @@ body,h1,h2,h3,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,fieldset,legend,button
     position: absolute;
     right: 0;
     top: 0;
-    width:30%;
+    line-height: 2em;
+
+    width: 110px;
+    height: 41px;
+    /*width:30%;*/
 }
+
+.Newest .hand .new-praise{
+    position: absolute;
+    /*right: 0;*/
+    /*bottom: 0;*/
+    /*margin-top: 5em;*/
+    bottom: 0;
+}
+
 /*.Newest .hand img{*/
     /*width: 100%;*/
 /*}*/
@@ -196,6 +275,8 @@ body,h1,h2,h3,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,fieldset,legend,button
     font-size: 16px;
     color: #9d9d9d;
 }
+
+
 /*.Newest .wjx{*/
 
     /*/!*width: 62%;*!/*/
@@ -234,10 +315,11 @@ body,h1,h2,h3,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,fieldset,legend,button
 .Hottest .title .icon {
     left: 0;
     height: 4em;
+    margin-top: 1em;
 }
 .Hottest .title .icon img {
-    height: 100%;
-    width: auto;
+    height: 70%;
+    width: 70%;
 }
 .Hottest .title .more {
     top: 1em;
@@ -312,10 +394,11 @@ body,h1,h2,h3,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,fieldset,legend,button
 .Immediately .title .icon {
     left: 0;
     height: 4em;
+    margin-top: 1em;
 }
 .Immediately .title .icon img {
-    height: 100%;
-    width: auto;
+    height: 70%;
+    width: 70%;
 }
 .Immediately .title .more {
     top: 1em;
@@ -379,10 +462,11 @@ body,h1,h2,h3,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,fieldset,legend,button
 .Classify .title .icon {
     left: 0;
     height: 4em;
+    margin-top: 1em;
 }
 .Classify .title .icon img {
-    height: 100%;
-    width: auto;
+    height: 70%;
+    width: 70%;
 }
 .Classify .title .more {
     top: 1em;
@@ -404,6 +488,9 @@ body,h1,h2,h3,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,fieldset,legend,button
 }
 .Classify .content a {
     display: block;
+    position: relative;
+    height: 0;
+    padding-bottom: 128.4%;
 }
 .Classify img {
     width: 100%;
@@ -412,10 +499,15 @@ body,h1,h2,h3,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,fieldset,legend,button
     color: #177ccc;
     text-align: center;
     line-height: 2em;
+    height: 2em;
+    overflow: hidden;
 }
 .Classify  h6{
     font-size: 10px;
     text-align: center;
+    height: 2.4em;
+    line-height: 1.2em;
+    overflow: hidden;
     padding-bottom: 1em;
     color: #737373;
 }
@@ -446,6 +538,22 @@ body,h1,h2,h3,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,fieldset,legend,button
     height: 10px;
     color: #ffffff;
 }
+.moreFilm {
+    clear: both;
+}
+.moreFilm:after {
+    content: "";
+    display: block;
+    height: 1px;
+    clear: both;
+}
+.moreFilm .content a{
+    display: block;
+    position: relative;
+    height: 0;
+    padding-bottom: 128.4%;
+}
+
 
 .moreFilm li {
     width: 16.66%;
@@ -463,16 +571,20 @@ body,h1,h2,h3,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,fieldset,legend,button
     color: #177ccc;
     text-align: center;
     line-height: 2em;
+    height: 2em;
+    overflow: hidden;
 }
 .moreFilm  h6{
     font-size: 10px;
     text-align: center;
+    height: 2.4em;
+    line-height: 1.2em;
+    overflow: hidden;
     padding-bottom: 1em;
     color: #737373;
 }
 
 .moreFilm ul{
-    /*position: absolute;*/
     left:12em;
 }
 .moreFilm .show li{
@@ -539,7 +651,7 @@ body,h1,h2,h3,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,fieldset,legend,button
     color: #ffffff;
 }
 
-.carousel-inner{
+.carousel-inner, .list li{
     cursor: pointer;
 }
 

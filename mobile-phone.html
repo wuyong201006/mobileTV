@@ -10,11 +10,11 @@
     <title>移动影视-手机版</title>
     <script type="text/javascript">
         var IsPhone = true;
-//        var u = navigator.userAgent;
-//        if (u.indexOf('Android') > -1 || u.indexOf('iPhone') > -1 || u.indexOf('Mobile') > -1) {
-//            location.href = "mobile-phone.html";
-//            IsPhone = true;
-//        }
+        //        var u = navigator.userAgent;
+        //        if (u.indexOf('Android') > -1 || u.indexOf('iPhone') > -1 || u.indexOf('Mobile') > -1) {
+        //            location.href = "mobile-phone.html";
+        //            IsPhone = true;
+        //        }
     </script>
 </head>
 <body>
@@ -37,17 +37,17 @@
                 <div class="item active">
                     <div class="L-btn"></div>
                     <div class="R-btn"></div>
-                    <img src="images/banner4.jpg" alt="First slide">
+                    <img src="images/banner2.png" alt="First slide">
                 </div>
                 <div class="item">
                     <div class="L-btn"></div>
                     <div class="R-btn"></div>
-                    <img src="images/banner2.jpg" alt="Second slide">
+                    <img src="images/banner3.png" alt="Second slide">
                 </div>
                 <div class="item ">
                     <div class="L-btn"></div>
                     <div class="R-btn"></div>
-                    <img src="images/banner3.jpg" alt="Third slide">
+                    <img src="images/banner4.png" alt="Third slide">
                 </div>
             </div>
             <!-- 轮播（Carousel）导航 -->
@@ -55,27 +55,29 @@
                data-slide="prev"></a>
             <a class="carousel-control right" href="#myCarousel"
                data-slide="next"></a>
+            <div class="banner-brief-box">
+                <div class="banner-brief-bg">
+                </div>
+                <div class="banner-brief">
+                    <span id="bannerBrief">你不哭 我们替你哭</span>
+                </div>
+            </div>
         </div>
         <div class="banner-detail-info">
             <div class="banner-detail-bg">
             </div>
             <div class="banner-detail">
                 <div class="banner-box">
-                <h2 id="bannerTitle" class="banner-title">滚蛋滚蛋滚蛋滚蛋</h2>
-                <h5 class="banner-introduction">剧情介绍：</h5>
-                <span id="bannerDetail" class="banner-detail-detail">插画师插画师</span><br/><br/>
-                <div><span>主演:</span><span id="bannerActor">白百合</span></div>
-                <div id="bannerStar" class="banner-star"><img src="images/star.png"/></div>
-                <div class="hand"><img src="images/hand.png"/><span id="bannerPraise" class="banner-praise">999999</span></div>
+                    <h2 id="bannerTitle" class="banner-title">滚蛋滚蛋滚蛋滚蛋</h2>
+                    <h5 class="banner-introduction">剧情介绍：</h5>
+                    <span id="bannerDetail" class="banner-detail-detail">插画师插画师</span><br/><br/>
+
+                    <div><span>主演:</span><span id="bannerActor">白百合</span></div>
+                    <div id="bannerStar" class="banner-star"><img src="images/star.png"/></div>
                 </div>
+                <div class="hand"><img src="images/hand.png"/><span id="bannerPraise"
+                                                                    class="banner-praise">999999</span></div>
             </div>
-        </div>
-
-        <div class="banner-brief-bg">
-
-        </div>
-        <div class="banner-brief">
-            <span id="bannerBrief">你不哭 我们替你哭</span>
         </div>
     </div>
     <div id="newest" class="newest item-box">
@@ -95,7 +97,8 @@
 
                         <p id="newDetail">刘亦菲宋承宪定情之作</p>
 
-                        <div class="hand"><img src="images/hand.png"><span id="newPraise" class="new-praise"></span></div>
+                        <div class="hand"><img src="images/hand.png"><span id="newPraise" class="new-praise"></span>
+                        </div>
                         <div id="newStarLevel" class="wjx"><img src="images/wjx.png"></div>
                     </div>
                 </div>
@@ -521,7 +524,7 @@
 <script src="js/bootstrap.min.js"></script>
 <script type="text/javascript" src="js/mobileTV.js"></script>
 <script type="text/javascript">
-    $(function(){
+    $(function () {
         init();
     })
 </script>
