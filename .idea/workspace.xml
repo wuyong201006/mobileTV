@@ -37,25 +37,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="logo.jpg" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/images/logo.jpg">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="logo-bg.jpg" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/images/logo-bg.jpg">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.807693">
-              <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+            <state vertical-scroll-proportion="-11.115385">
+              <caret line="140" column="25" selection-start-line="140" selection-start-column="25" selection-end-line="140" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -84,21 +70,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mobileTV.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="mobileTV.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/mobileTV.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.45945945">
-              <caret line="334" column="25" selection-start-line="334" selection-start-column="25" selection-end-line="334" selection-end-column="25" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="321" column="15" selection-start-line="321" selection-start-column="15" selection-end-line="321" selection-end-column="15" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mobile.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="mobile.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/mobile.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="202" column="19" selection-start-line="202" selection-start-column="19" selection-end-line="202" selection-end-column="19" />
+            <state vertical-scroll-proportion="0.14616321">
+              <caret line="193" column="18" selection-start-line="193" selection-start-column="18" selection-end-line="193" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -107,17 +93,10 @@
       <file leaf-file-name="Test.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Test.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="57" column="17" selection-start-line="57" selection-start-column="17" selection-end-line="57" selection-end-column="17" />
+            <state vertical-scroll-proportion="-8.5">
+              <caret line="31" column="30" selection-start-line="31" selection-start-column="30" selection-end-line="31" selection-end-column="30" />
               <folding />
             </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="header-bg.jpg" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/images/header-bg.jpg">
-          <provider selected="true" editor-type-id="images">
-            <state />
           </provider>
         </entry>
       </file>
@@ -146,8 +125,8 @@
         <option value="$PROJECT_DIR$/knockout.html" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/css/mobile.css" />
-        <option value="$PROJECT_DIR$/Test.html" />
         <option value="$PROJECT_DIR$/js/mobileTV.js" />
+        <option value="$PROJECT_DIR$/Test.html" />
       </list>
     </option>
   </component>
@@ -159,8 +138,8 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="119" />
-    <option name="y" value="44" />
+    <option name="x" value="444" />
+    <option name="y" value="12" />
     <option name="width" value="1621" />
     <option name="height" value="988" />
   </component>
@@ -317,7 +296,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="119" y="44" width="1621" height="988" extended-state="1" />
+    <frame x="444" y="12" width="1621" height="988" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16573209" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -630,11 +609,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/images/1.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/images/newest--pc.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -676,11 +650,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/images/logo.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/images/header-bg.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -691,28 +660,17 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/mobile.css">
+    <entry file="file://$PROJECT_DIR$/js/mobileTV.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="202" column="19" selection-start-line="202" selection-start-column="19" selection-end-line="202" selection-end-column="19" />
+          <caret line="321" column="15" selection-start-line="321" selection-start-column="15" selection-end-line="321" selection-end-column="15" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Test.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
-          <caret line="57" column="17" selection-start-line="57" selection-start-column="17" selection-end-line="57" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.807693">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-          <folding />
-        </state>
+    <entry file="file://$PROJECT_DIR$/images/logo.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mobile-phone.html">
@@ -725,10 +683,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/mobileTV.js">
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.45945945">
-          <caret line="334" column="25" selection-start-line="334" selection-start-column="25" selection-end-line="334" selection-end-column="25" />
+        <state vertical-scroll-proportion="-11.115385">
+          <caret line="140" column="25" selection-start-line="140" selection-start-column="25" selection-end-line="140" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.5">
+          <caret line="31" column="30" selection-start-line="31" selection-start-column="30" selection-end-line="31" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/mobile.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.14616321">
+          <caret line="193" column="18" selection-start-line="193" selection-start-column="18" selection-end-line="193" selection-end-column="18" />
           <folding />
         </state>
       </provider>
