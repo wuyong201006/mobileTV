@@ -5,43 +5,130 @@
     <title></title>
 
     <style>
-        .leftBox, .rightBox, #div1,#div2
-        {
+        /*.leftBox, .rightBox, #div1,#div2*/
+        /*{*/
+        /*float: left;*/
+        /*}*/
+
+        .header{
+            max-width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 1em;
+
+            overflow: hidden;
+        }
+
+        .container {
+            width: 1024px;
+            /*text-align: center;*/
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .container-top{
+            width: 100%;
+            border-style: solid solid solid solid;
+            border-width: 1px;
+            border-color: #000000;
+        }
+
+        .container .leftBox{
             float: left;
+            /*clear: both;*/
+            /*width: 33.33%;*/
+        }
+
+        .container .rightBox {
+            position: relative;
+            /*clear: both;*/
+            float: left;
+            width: 543px;
+            /*width: 215px;*/
+            /*height: 628px;*/
+        }
+
+        .container .rightBox .rightBox-div{
+            clear: both;
+            display: inline-block;
+            width: 175px;
+            height: 150px;
+        }
+
+        .btnBox {
+            position: absolute;
+
+            left: 0;
+            bottom: 0;
         }
     </style>
 </head>
 <body>
-    <div id="newBox">
-        <div class="leftBox">
-            <img src="images/pc1_10.png"/>
-        </div>
-        <div class="rightBox">
-            <div id="div1">
-                <img src="images/pc1_15.png"/>
-                <a class="label1">别有动机</a>
-            </div>
-            <div id="div2">
-                <img src="images/pc1_12.png"/>
-                <a class="label1">小王子</a>
-            </div>
-        </div>
+    <div class="header">
+        <img src="images/logo-bg.jpg"/>
     </div>
-    <div id="newMoreBox">
-        <img />
+    <div class="container">
+        <div class="container-top">
+            <div class="leftBox">
+                <img src="images/pc1_10.png"/>
+            </div>
+            <div class="rightBox">
+                <div id="div1" class="rightBox-div">
+                    <img src="images/pc1_15.png"/>
+                    <a class="label1">别有动机</a>
+                </div>
+                <div id="div2" class="rightBox-div">
+                    <img src="images/pc1_12.png"/>
+                    <a class="label1">小王子</a>
+                </div>
+                <div class="rightBox-div">
+                    <img src="images/pc1_15.png">
+                    <a class="label1">小王子</a>
+                </div>
+                <div id="div4" class="rightBox-div">
+                    <img src="images/pc1_12.png"/>
+                    <a class="label1">小王子</a>
+                </div>
+                <!--<div class="btnBox">-->
+                    <!--<button id="newBtn">更多</button>-->
+                    <!--<button id="hotBtn">更多</button>-->
+                <!--</div>-->
+            </div>
+        </div>
     </div>
 
-    <div>
-        <button id="newBtn">更多</button>
-        <button id="hotBtn">更多</button>
-    </div>
+<!--<div id="newMoreBox" data-film='{"name":"无极"}'>-->
+<!--</div>-->
 
-    <script type="text/javascript" src="js/jquery.min.js"></script>
-    <script type="text/javascript" src="js/mobileTV.js"></script>
-    <script type="text/javascript">
-        init();
-       console.info( $("#new").children("div").length);
-        $newBox.find("#div2").find(a).href()
-    </script>
+<!--<div class="btnBox">-->
+<!--<button id="newBtn">更多</button>-->
+<!--<button id="hotBtn">更多</button>-->
+<!--</div>-->
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<!--<script type="text/javascript" src="js/mobileTV.js"></script>-->
+<script type="text/javascript">
+    //       console.info( $("#new").children("div").length);
+    //        $newBox.find("#div2").find(a).href()
+
+    var data = {
+        name: "无极",
+        url: "http"
+    }
+
+    //function(e){linkTo($(this))}
+    //         var html = '<span data-film="'+{"name":"无极"}+'" onclick="linkTo($(this))">我爱人民,爱祖国</span>';
+    //         $("#newMoreBox").html(html);
+    var sp = $("<span onclick='linkTo($(this))'>我爱人民，爱祖国</span>");
+
+    $(sp).data("film", data);
+//    $("#newMoreBox").append(sp);
+//    document.getElementById(newMoreBox).childNodes.length;
+    function linkTo($res) {
+//            $res.data("film");
+        console.info($res.data("film"));
+//        console.info($("#newMoreBox").data("film"));
+    }
+</script>
 </body>
 </html>
