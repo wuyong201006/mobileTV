@@ -1,14 +1,20 @@
 @charset "UTF-8";
 body,h1,h2,h3,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,fieldset,legend,button,input,textarea,th,td{margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,nav,section,summary{display:block}body{overflow-x:hidden;overflow-y:auto}body,button,input,select,textarea{font:16px/1 "Microsoft YaHei", "微软雅黑", STXihei, "华文细黑", serif;color:#222}button,input,select,textarea{font-size:100%}textarea{overflow:auto;vertical-align:top}button,input{line-height:normal}button,select{text-transform:none}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}input[type="checkbox"],input[type="radio"]{vertical-align:middle}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}a{color:#177ccc}a:hover{text-decoration:underline}mark{background-color:transparent}address,cite,dfn,em,var{font-style:normal}code,kbd,pre,samp,tt{font-family:"Courier New", Courier, monospace}small{font-size:12px}ul,ol{list-style:none}abbr[title],acronym[title]{border-bottom:1px dotted;cursor:help}q:before,q:after{content:''}legend{color:#000}fieldset,img{border:none}table{border-collapse:collapse;border-spacing:0}i{font-style:normal}
+html, body{
+    width: 100%;
+    height: 100%;
+
+    font-size: 16px;
+}
 .logo{
-     max-width: 100%;
+    max-width: 100%;
     margin-right: auto;
     margin-left: auto;
     margin-bottom: 1em;
 }
 
 .wrapper{
-    width: 1002px;
+    width: 75%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -45,14 +51,18 @@ body,h1,h2,h3,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,fieldset,legend,button
     color: #ffffff;
     z-index: 99;
     width: 95%;
+
+    line-height: 2em;
 }
 
 .banner-detail-text .title{
     font-size: 2em;
+    /*margin-bottom: 1.5em;*/
 }
 
 .banner-detail-text .tv-title{
     font-size: 1.5em;
+    /*margin-bottom: 1.5em;*/
 }
 
 .banner-detail-text .detail-box{
@@ -142,42 +152,94 @@ body,h1,h2,h3,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,fieldset,legend,button
     /*z-index: 999;*/
 }
 
+.wrapper .classify-top{
+    width: 100%;
+    margin-top: 1em;
+    margin-bottom: 0.8em;
+}
+
+.wrapper .classify-top .classify-box{
+    width: 103%;
+    /*margin-left: auto;*/
+    /*margin-right: auto;*/
+}
+
+.classify-top .classify-box .classify{
+    display: inline-block;
+    /*margin-right: 10px;*/
+    width: 23.5%;
+    margin-right: 8px;
+    margin-bottom: 13px;
+
+    cursor: pointer;
+}
+
+.classify-top .classify-box .classify img{
+    width: 100%;
+    height: 100%;
+}
+
+
 .Newest{
-    margin-bottom: 2em;
+    width: 100%;
+    /*margin-bottom: 1.5em;*/
 }
 .Newest .title {
-    position: relative;
-}
-.Newest .title .txt {
-    margin-left: 9em;
-    margin-right: 4em;
+    width: 100%;
     height: 4em;
-}
-.Newest .title .txt span {
     position: relative;
-    display: block;
-    padding-top: 1.5em;
-    line-height: 2em;
-    border-bottom: 1px solid #cccccc;
-    font-size: 16px;
+    margin-bottom: 1em;
 }
-.Newest .title .icon,.Newest .title .more  {
+
+.title .icon{
+    float: left;
+    width: 10%;
+    height: 100%;
+
+    position: relative;
+}
+
+.title .icon img{
+    width: 100%;
+    height: 67%;
+
     position: absolute;
-    top: 0;
-}
-.Newest .title .icon {
-    left: 0;
-    height: 4em;
-    margin-top: 1em;
-}
-.Newest .title .icon img {
-    height: 70%;
-    width: 70%;
-    top: 10px;
-}
-.Newest .title .more {
-    top: 1em;
     right: 0;
+    bottom: -8px;
+}
+
+.bottom-back{
+    float: left;
+
+    width: 90%;
+    height: 100%;
+
+    border-bottom:1px solid #cccccc;
+
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.bottom-back .bottom-box{
+    width: 100%;
+    height: 100%;
+
+    position: relative;
+}
+
+.bottom-back .bottom-box .txt{
+    position: absolute;
+    bottom: 0;
+
+    font-size: 1.3em;
+}
+
+.bottom-back .bottom-box .more{
+    position: absolute;
+    right: 0;
+    bottom: 2px;
+
     height: 2em;
     line-height: 2em;
     background-color: #177ccc;
@@ -185,6 +247,9 @@ body,h1,h2,h3,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,fieldset,legend,button
     padding-left: 1em;
     padding-right: 1em;
     color: #ffffff;
+}
+.Newest .content{
+    clear: both;
 }
 .Newest .left-box{
     width: 31.7%;
@@ -268,70 +333,24 @@ body,h1,h2,h3,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,fieldset,legend,button
     bottom: 0;
 }
 
-/*.Newest .hand img{*/
-    /*width: 100%;*/
-/*}*/
 .Newest .info p span{
     font-size: 16px;
     color: #9d9d9d;
 }
 
-
-/*.Newest .wjx{*/
-
-    /*/!*width: 62%;*!/*/
-    /*height: 3em;*/
-    /*position: relative;*/
-    /*background-size: 80%;*/
-    /*right: 0;*/
-/*}*/
-/*.Newest .wjx img{*/
-    /*width: 100%;*/
-/*}*/
 /*最热*/
 .Hottest{
-    margin-bottom: 2em;
+    /*margin-bottom: 2em;*/
+    width: 100%;
 }
+
 .Hottest .title {
-    position: relative;
-}
-.Hottest .title .txt{
-    margin-left: 9em;
-    margin-right: 4em;
+    width: 100%;
     height: 4em;
-}
-.Hottest .title .txt span {
     position: relative;
-    display: block;
-    padding-top: 1.5em;
-    line-height: 2em;
-    border-bottom: 1px solid #cccccc;
-    font-size: 16px;
+    margin-bottom: 1em;
 }
-.Hottest .title .icon,.Hottest .title .more  {
-    position: absolute;
-    top: 0;
-}
-.Hottest .title .icon {
-    left: 0;
-    height: 4em;
-    margin-top: 1em;
-}
-.Hottest .title .icon img {
-    height: 70%;
-    width: 70%;
-}
-.Hottest .title .more {
-    top: 1em;
-    right: 0;
-    height: 2em;
-    line-height: 2em;
-    background-color: #177ccc;
-    border-radius: 15px;
-    padding-left: 1em;
-    padding-right: 1em;
-    color: #ffffff;
-}
+
 .Hottest .content li {
     width: 16.66%;
     float: left;
@@ -369,48 +388,17 @@ body,h1,h2,h3,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,fieldset,legend,button
 }
 /*即将上映*/
 .Immediately{
-    margin-bottom: 2em;
+    /*margin-bottom: 2em;*/
+    width: 100%;
 }
+
 .Immediately .title {
-    position: relative;
-}
-.Immediately .title .txt{
-    margin-left: 9em;
-    margin-right: 4em;
+    width: 100%;
     height: 4em;
-}
-.Immediately .title .txt span {
     position: relative;
-    display: block;
-    padding-top: 1.5em;
-    line-height: 2em;
-    border-bottom: 1px solid #cccccc;
-    font-size: 16px;
+    margin-bottom: 1em;
 }
-.Immediately .title .icon,.Immediately .title .more  {
-    position: absolute;
-    top: 0;
-}
-.Immediately .title .icon {
-    left: 0;
-    height: 4em;
-    margin-top: 1em;
-}
-.Immediately .title .icon img {
-    height: 70%;
-    width: 70%;
-}
-.Immediately .title .more {
-    top: 1em;
-    right: 0;
-    height: 2em;
-    line-height: 2em;
-    background-color: #177ccc;
-    border-radius: 10px;
-    padding-left: 1em;
-    padding-right: 1em;
-    color: #ffffff;
-}
+
 .Immediately .content li {
     width: 16.66%;
     float: left;
@@ -604,6 +592,9 @@ body,h1,h2,h3,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,fieldset,legend,button
     width: 10px;
     height: 10px;
     color: #ffffff;
+}
+.right-box ul{
+    margin-bottom: 0;
 }
 
 .right-box .item a {

@@ -20,19 +20,10 @@ const PREVUE = "特辑";
 const PATH = "";
 const STARURL = PATH+"images/star.png";
 
+//电影一排长度
 var NEWRESLENGTH = 5;
 var HOTRESLENGTH = 3;
 var FUTURERESLENGTH = 6;
-//电影一排长度
-if(IsPhone){
-    NEWRESLENGTH = 5;
-    HOTRESLENGTH = 3;
-    FUTURERESLENGTH = 6;
-}else{
-    NEWRESLENGTH = 8;
-    HOTRESLENGTH = 6;
-    FUTURERESLENGTH = 6;
-}
 
 const MOREFILMLENGTH = 6
 
@@ -65,6 +56,8 @@ var $bannerStar = $("#bannerStar");
 var $bannerPraise = $("#bannerPraise");
 var $bannerBrief = $("#bannerBrief");
 
+var $classifyBox = $("#classifyBox");
+
 var $leftBox = $("#leftBox")
 var $newLeftBg = $leftBox.children("div").eq(0).find("img");
 var $newTitle = $("#newTitle");
@@ -94,9 +87,21 @@ var futureResList = [];
 var calssifyResList = [];
 
 function init() {
+    IsInit = true;
+
+    if(IsPhone){
+        NEWRESLENGTH = 5;
+        HOTRESLENGTH = 3;
+        FUTURERESLENGTH = 6;
+    }else{
+        NEWRESLENGTH = 8;
+        HOTRESLENGTH = 6;
+        FUTURERESLENGTH = 6;
+    }
+
     initElement();
     addEvent();
-    loadConfig();
+    loadConfig(initRefres);
 }
 
 function addEvent() {
@@ -104,6 +109,15 @@ function addEvent() {
     //});
     //$nextBtn.click(function (e) {
     //});
+    if($classifyBox != undefined){
+        $classifyBox.delegate("div", "click", function(e){
+            if(IsPhone){
+                location.href = "classify-phone.html?url="+encodeURI(JSON.stringify($(this).index()));
+            }else{
+                location.href = "classify.html?url="+encodeURI(JSON.stringify($(this).index()));
+            }
+        })
+    }
 
     $newBtn.click(clickMoreBtn);
     $hotBtn.click(clickMoreBtn);
@@ -145,7 +159,7 @@ function getListByIndex(index)
     switch(index)
     {
         case 0:
-            return affectionalList;
+            return newlist;
         case 1:
             return actionList;
         case 2:
@@ -153,10 +167,12 @@ function getListByIndex(index)
         case 3:
             return adventureList;
         case 4:
-            return draculaList;
+            return affectionalList;
         case 5:
-            return suspenseList;
+            return draculaList;
         case 6:
+            return suspenseList;
+        case 7:
             return cartoonList;
     }
 }
@@ -166,7 +182,7 @@ function getNameByIndex(index)
     switch(index)
     {
         case 0:
-            return "affectional";
+            return "new";
         case 1:
             return "action";
         case 2:
@@ -174,16 +190,17 @@ function getNameByIndex(index)
         case 3:
             return "adventure";
         case 4:
-            return "dracula";
+            return "affectional";
         case 5:
-            return "suspense";
+            return "dracula";
         case 6:
+            return "suspense";
+        case 7:
             return "cartoon";
     }
 }
 
 function initElement() {
-
     addElementToList($newBox, newResList);
     addElementToList($hotBox, hotResList);
     addElementToList($futureBox, futureResList);
@@ -236,7 +253,6 @@ function getDesignatedArray(list, len, startIndex) {
 }
 
 function initRefres() {
-
     bannerRefres();
     if(headlist.length > 0)
         headSwitch(headlist[0]);
@@ -265,7 +281,7 @@ function addElementToList($res, resList) {
 }
 
 var IsConfigComplete = false;
-function loadConfig() {
+function loadConfig(callback) {
     $.getJSON(PATH+"config/out.json", function (data) {
         filmlist = data;
         for (var i = 0; i < filmlist.length; i++) {
@@ -273,7 +289,9 @@ function loadConfig() {
         }
 
         printf();
-        initRefres();
+        if(callback != undefined){
+            callback();
+        }
         IsConfigComplete = true;
     });
 }
@@ -298,11 +316,38 @@ function validate(data)
         return "";
     }
 
+
     var url = data.resFileList[0].resFileInfo.localFileName;
     url = url.split(".")[0]+".mp4";
-    return url;
+    var resInfo = data.resInfo;
+    var title = "";
+    var norImg = "";
+    var sImg = "";
+    var brief = "";
+    var detail = "";
+    if(resInfo != undefined){
+        if(resInfo.title != undefined){
+            title = resInfo.title;
+        }
+
+        if(resInfo.remoteImgNormal != undefined){
+            norImg = resInfo.remoteImgNormal;
+        }
+        if(resInfo.remoteImgSmall != undefined){
+            sImg = resInfo.remoteImgSmall;
+        }
+
+        if(resInfo.description != undefined){
+            brief = getDetail(data);
+            detail = resInfo.description;
+        }
+    }
+    var jsonString = JSON.stringify({url:url, title:title, norImg:norImg, sImg:sImg, brief:brief, detail:detail});
+
+    return encodeURI(jsonString);
 }
-function filmPlay(data) {
+
+function filmPlay(data, IsPhone) {
     //console.info(data.resFileList[0].resFileInfo.localFileName);
     var url = "video/prevue/ChQoM1XMeoeALpBDCcjwAGRau3U8450.mp4";
     if(IsPhone){
@@ -370,12 +415,12 @@ function moreRefres(list, parent, name) {
         if(IsPhone){
             box += '<li id="'+idString+'" onclick="filmMore($(this))"><div class="item"><a>' +
                 '<div class="pic"><img src="'+PATH+data.resInfo.remoteImgSmall+'"/><div class="pic-rating">' +
-                '<span class="rating">"'+getStarLevel()+'"</span><span class="bg"></span></div></div><div class="info">' +
+                '<span class="rating">'+getStarLevel()+'</span><span class="bg"></span></div></div><div class="info">' +
                 '<h3 class="title">"'+data.resInfo.title+'"</h3><p>"'+getDetail(data)+'"</p> </div></a></div></li>';
         }else {
             //filmPlay(JSON.parse($(this).film)) data-film="jsonData"
             box += '<li id="'+idString+'" onclick="filmMore($(this))"><div class="item">' +
-                '<a><img src="' + PATH + data.resInfo.remoteImgSmall + '"/><div class="mark">"'+getStarLevel()+'"</div></a>' +
+                '<a><img src="' + PATH + data.resInfo.remoteImgSmall + '"/><div class="mark">'+getStarLevel()+'</div></a>' +
                 '<div class="info"><h4>"' + data.resInfo.title + '"</h4><h6>"' + getDetail(data) + '"</h6></div></div></li>';
         }
     }
@@ -406,7 +451,7 @@ function filmMore($res){
     if(data === undefined)
         return;
 
-    filmPlay(data);
+    filmPlay(data, IsPhone);
 }
 
 //清除显示
@@ -438,7 +483,7 @@ function bannerRefres() {
         //res.find("img").attr("src", PATH+data.resInfo.remoteImgNormal);
 
         res.click(function(e){
-            filmPlay($(this).data("data"));
+            filmPlay($(this).data("data"), IsPhone);
         })
     }
 }
@@ -470,7 +515,7 @@ function newRefresLeft() {
     $newDetail.html(getDetail(data));
     $leftBox.data("data", data);
     $leftBox.click(function(e){
-        filmPlay($(this).data("data"));
+        filmPlay($(this).data("data"), IsPhone);
     })
 }
 
@@ -503,7 +548,7 @@ function filmRefres(resList, dataList) {
 
 
         res.click(function (e) {
-            filmPlay($(this).data("data"));
+            filmPlay($(this).data("data"), IsPhone);
         });
     }
 }
@@ -513,7 +558,7 @@ function linkTo(res){
         return;
     }
     var data = res.parent("li").data("data");
-    filmPlay(data)
+    filmPlay(data, IsPhone)
 }
 
 function getDetail(data)

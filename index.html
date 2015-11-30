@@ -3,15 +3,13 @@
 <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
-    <link rel="stylesheet" type="text/css" href="css/mobile.css"/>
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/mobile.css"/>
     <title>移动影视</title>
+    <script type="text/javascript" src="js/versionInfo.js"></script>
     <script type="text/javascript">
-        var IsPhone = false;
-        var u = navigator.userAgent;
-        if (u.indexOf('Android') > -1 || u.indexOf('iPhone') > -1 || u.indexOf('Mobile') > -1) {
+        if(IsPhone){
             location.href = "mobile-phone.html";
-            IsPhone = true;
         }
     </script>
 </head>
@@ -77,10 +75,12 @@
                 </div>
             </div>
             <!-- 轮播（Carousel）导航 -->
-            <a class="carousel-control left" href="#myCarousel"
-               data-slide="prev"></a>
-            <a class="carousel-control right" href="#myCarousel"
-               data-slide="next"></a>
+            <a class="carousel-control left" href="#myCarousel" data-slide="prev">
+                <img src="images/L-btn.png"/>
+            </a>
+            <a class="carousel-control right" href="#myCarousel" data-slide="next">
+                <img src="images/R-btn.png"/>
+            </a>
 
             <div class="banner-brief-box">
                 <div class="banner-brief-bg">
@@ -110,11 +110,26 @@
             </div>
         </div>
     </div>
+
+    <div class="classify-top">
+        <div id="classifyBox" class="classify-box">
+            <div class="classify"><img src="images/new.png"/></div>
+            <div class="classify"><img src="images/action.png"/></div>
+            <div class="classify"><img src="images/comedy.png"/></div>
+            <div class="classify"><img src="images/adventure.png"/></div>
+            <div class="classify"><img src="images/affectional.png"/></div>
+            <div class="classify"><img src="images/dracula.png"/></div>
+            <div class="classify"><img src="images/suspense.png"/></div>
+            <div class="classify"><img src="images/cartoon.png"/></div>
+        </div>
+    </div>
     <div class="Newest">
         <div class="title">
             <div class="icon"><img src="images/newest--pc.png"></div>
-            <div class="txt"><span>上映</span></div>
-            <a id="newBtn" class="more" href="#">更多</a>
+            <div class="bottom-back">
+                <div class="bottom-box"><span class="txt">上映</span><a id="newBtn" class="more" href="#">更多</a></div>
+            </div>
+            <!--<div class="txt"><span>上映</span></div>-->
         </div>
         <div class="content clearfix">
             <div id="leftBox" class="left-box">
@@ -262,8 +277,10 @@
     <div class="Hottest clearfix">
         <div class="title">
             <div class="icon"><img src="images/hostest.png"></div>
-            <div class="txt"><span>最热</span></div>
-            <a id="hotBtn" class="more" href="#">更多</a>
+            <div class="bottom-back">
+                <div class="bottom-box"><span class="txt">上映</span><a id="hotBtn" class="more" href="#">更多</a></div>
+            </div>
+            <!--<div class="txt"><span>上映</span></div>-->
         </div>
         <div id="hotBox" class="content">
             <div class="list">
@@ -365,9 +382,11 @@
     </div>
     <div class="Immediately clearfix">
         <div class="title">
-            <div class="icon"><img src="images/Imd.png"></div>
-            <div class="txt"><span>上映</span></div>
-            <a id="futureBtn" class="more" href="#">更多</a>
+            <div class="icon"><img src="images/audience.png"></div>
+            <div class="bottom-back">
+                <div class="bottom-box"><span class="txt">好评</span><a id="futureBtn" class="more" href="#">更多</a></div>
+            </div>
+            <!--<div class="txt"><span>上映</span></div>-->
         </div>
         <div id="futureBox" class="content">
             <div class="list">
@@ -377,7 +396,7 @@
                             <a href="">
                                 <img src="images/02.png">
 
-                                <div class="Lucency">11月06日</div>
+                                <div class="mark">5.0</div>
                             </a>
 
                             <div class="info">
@@ -388,57 +407,61 @@
                     </li>
                     <li>
                         <div class="item">
+
                             <a href="">
                                 <img src="images/01.png">
 
-                                <div class="Lucency">11月06日</div>
+                                <div class="mark">5.0</div>
                             </a>
 
                             <div class="info">
                                 <h4>我是路人甲</h4>
-                                <h6>许晴上演小三诱惑</h6>
+                                <h6>三角关系紧锁秦岚</h6>
                             </div>
                         </div>
                     </li>
                     <li>
                         <div class="item">
+
                             <a href="">
                                 <img src="images/03.png">
 
-                                <div class="Lucency">11月06日</div>
+                                <div class="mark">5.0</div>
                             </a>
 
                             <div class="info">
                                 <h4>小王子</h4>
-                                <h6>著名小说改编</h6>
+                                <h6>三角关系紧锁秦岚</h6>
                             </div>
                         </div>
                     </li>
                     <li>
                         <div class="item">
+
                             <a href="">
                                 <img src="images/02.png">
 
-                                <div class="Lucency">11月06日</div>
+                                <div class="mark">5.0</div>
                             </a>
 
                             <div class="info">
                                 <h4>绝命逃亡</h4>
-                                <h6>刘亦菲激吻天行者</h6>
+                                <h6>三角关系紧锁秦岚</h6>
                             </div>
                         </div>
                     </li>
                     <li>
                         <div class="item">
+
                             <a href="">
                                 <img src="images/02.png">
 
-                                <div class="Lucency">11月06日</div>
+                                <div class="mark">5.0</div>
                             </a>
 
                             <div class="info">
                                 <h4>别有动机</h4>
-                                <h6>著名小说改编</h6>
+                                <h6>三角关系紧锁秦岚</h6>
                             </div>
                         </div>
                     </li>
@@ -448,12 +471,12 @@
                             <a href="">
                                 <img src="images/02.png">
 
-                                <div class="Lucency">11月06日</div>
+                                <div class="mark">5.0</div>
                             </a>
 
                             <div class="info">
                                 <h4>恋爱排班表</h4>
-                                <h6>许晴上演小三诱惑</h6>
+                                <h6>三角关系紧锁秦岚</h6>
                             </div>
                         </div>
                     </li>
@@ -463,282 +486,282 @@
             </div>
         </div>
     </div>
-    <div class="Classify clearfix">
-        <div class="title">
-            <div class="icon"><img src="images/Cla.png"></div>
-            <div class="txt"><span>分类</span>
-                <ul id="calssifyTabNav" class="show">
-                    <li class="bg">爱情</li>
-                    <li>动作</li>
-                    <li>喜剧</li>
-                    <li>冒险</li>
-                    <li>恐怖</li>
-                    <li>悬疑</li>
-                    <li>动画</li>
-                </ul>
-            </div>
-        </div>
-        <div id="calssifyBox" class="content clearfix">
-            <div class="list">
-                <ul>
-                    <li>
-                        <div class="item">
+    <!--<div class="Classify clearfix">-->
+        <!--<div class="title">-->
+            <!--<div class="icon"><img src="images/Cla.png"></div>-->
+            <!--<div class="txt"><span>分类</span>-->
+                <!--<ul id="calssifyTabNav" class="show">-->
+                    <!--<li class="bg">爱情</li>-->
+                    <!--<li>动作</li>-->
+                    <!--<li>喜剧</li>-->
+                    <!--<li>冒险</li>-->
+                    <!--<li>恐怖</li>-->
+                    <!--<li>悬疑</li>-->
+                    <!--<li>动画</li>-->
+                <!--</ul>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<div id="calssifyBox" class="content clearfix">-->
+            <!--<div class="list">-->
+                <!--<ul>-->
+                    <!--<li>-->
+                        <!--<div class="item">-->
 
-                            <a href="">
-                                <img src="images/02.png">
+                            <!--<a href="">-->
+                                <!--<img src="images/02.png">-->
 
-                                <div class="mark">5.0</div>
-                            </a>
+                                <!--<div class="mark">5.0</div>-->
+                            <!--</a>-->
 
-                            <div class="info">
-                                <h4>我是路人甲</h4>
-                                <h6>三角关系紧锁秦岚</h6>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="item">
+                            <!--<div class="info">-->
+                                <!--<h4>我是路人甲</h4>-->
+                                <!--<h6>三角关系紧锁秦岚</h6>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                        <!--<div class="item">-->
 
-                            <a href="">
-                                <img src="images/02.png">
+                            <!--<a href="">-->
+                                <!--<img src="images/02.png">-->
 
-                                <div class="mark">5.0</div>
-                            </a>
+                                <!--<div class="mark">5.0</div>-->
+                            <!--</a>-->
 
-                            <div class="info">
-                                <h4>我是路人甲</h4>
-                                <h6>三角关系紧锁秦岚</h6>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="item">
-                            <a href="">
-                                <img src="images/02.png">
+                            <!--<div class="info">-->
+                                <!--<h4>我是路人甲</h4>-->
+                                <!--<h6>三角关系紧锁秦岚</h6>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                        <!--<div class="item">-->
+                            <!--<a href="">-->
+                                <!--<img src="images/02.png">-->
 
-                                <div class="mark">5.0</div>
-                            </a>
+                                <!--<div class="mark">5.0</div>-->
+                            <!--</a>-->
 
-                            <div class="info">
-                                <h4>我是路人甲</h4>
-                                <h6>三角关系紧锁秦岚</h6>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="item">
-                            <a href="">
-                                <img src="images/02.png">
+                            <!--<div class="info">-->
+                                <!--<h4>我是路人甲</h4>-->
+                                <!--<h6>三角关系紧锁秦岚</h6>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                        <!--<div class="item">-->
+                            <!--<a href="">-->
+                                <!--<img src="images/02.png">-->
 
-                                <div class="mark">5.0</div>
-                            </a>
+                                <!--<div class="mark">5.0</div>-->
+                            <!--</a>-->
 
-                            <div class="info">
-                                <h4>我是路人甲</h4>
-                                <h6>三角关系紧锁秦岚</h6>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="item">
-                            <a href="">
-                                <img src="images/02.png">
+                            <!--<div class="info">-->
+                                <!--<h4>我是路人甲</h4>-->
+                                <!--<h6>三角关系紧锁秦岚</h6>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                        <!--<div class="item">-->
+                            <!--<a href="">-->
+                                <!--<img src="images/02.png">-->
 
-                                <div class="mark">5.0</div>
-                            </a>
+                                <!--<div class="mark">5.0</div>-->
+                            <!--</a>-->
 
-                            <div class="info">
-                                <h4>我是路人甲</h4>
-                                <h6>三角关系紧锁秦岚</h6>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="item">
-                            <a href="">
-                                <img src="images/02.png">
+                            <!--<div class="info">-->
+                                <!--<h4>我是路人甲</h4>-->
+                                <!--<h6>三角关系紧锁秦岚</h6>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                        <!--<div class="item">-->
+                            <!--<a href="">-->
+                                <!--<img src="images/02.png">-->
 
-                                <div class="mark">5.0</div>
-                            </a>
+                                <!--<div class="mark">5.0</div>-->
+                            <!--</a>-->
 
-                            <div class="info">
-                                <h4>我是路人甲</h4>
-                                <h6>三角关系紧锁秦岚</h6>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="item">
-                            <a href="">
-                                <img src="images/02.png">
+                            <!--<div class="info">-->
+                                <!--<h4>我是路人甲</h4>-->
+                                <!--<h6>三角关系紧锁秦岚</h6>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                        <!--<div class="item">-->
+                            <!--<a href="">-->
+                                <!--<img src="images/02.png">-->
 
-                                <div class="mark">5.0</div>
-                            </a>
+                                <!--<div class="mark">5.0</div>-->
+                            <!--</a>-->
 
-                            <div class="info">
-                                <h4>我是路人甲</h4>
-                                <h6>三角关系紧锁秦岚</h6>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="item">
-                            <a href="">
-                                <img src="images/02.png">
+                            <!--<div class="info">-->
+                                <!--<h4>我是路人甲</h4>-->
+                                <!--<h6>三角关系紧锁秦岚</h6>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                        <!--<div class="item">-->
+                            <!--<a href="">-->
+                                <!--<img src="images/02.png">-->
 
-                                <div class="mark">5.0</div>
-                            </a>
+                                <!--<div class="mark">5.0</div>-->
+                            <!--</a>-->
 
-                            <div class="info">
-                                <h4>我是路人甲</h4>
-                                <h6>三角关系紧锁秦岚</h6>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="item">
-                            <a href="">
-                                <img src="images/02.png">
+                            <!--<div class="info">-->
+                                <!--<h4>我是路人甲</h4>-->
+                                <!--<h6>三角关系紧锁秦岚</h6>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                        <!--<div class="item">-->
+                            <!--<a href="">-->
+                                <!--<img src="images/02.png">-->
 
-                                <div class="mark">5.0</div>
-                            </a>
+                                <!--<div class="mark">5.0</div>-->
+                            <!--</a>-->
 
-                            <div class="info">
-                                <h4>我是路人甲</h4>
-                                <h6>三角关系紧锁秦岚</h6>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="item">
-                            <a href="">
-                                <img src="images/02.png">
+                            <!--<div class="info">-->
+                                <!--<h4>我是路人甲</h4>-->
+                                <!--<h6>三角关系紧锁秦岚</h6>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                        <!--<div class="item">-->
+                            <!--<a href="">-->
+                                <!--<img src="images/02.png">-->
 
-                                <div class="mark">5.0</div>
-                            </a>
+                                <!--<div class="mark">5.0</div>-->
+                            <!--</a>-->
 
-                            <div class="info">
-                                <h4>我是路人甲</h4>
-                                <h6>三角关系紧锁秦岚</h6>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="item">
-                            <a href="">
-                                <img src="images/02.png">
+                            <!--<div class="info">-->
+                                <!--<h4>我是路人甲</h4>-->
+                                <!--<h6>三角关系紧锁秦岚</h6>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                        <!--<div class="item">-->
+                            <!--<a href="">-->
+                                <!--<img src="images/02.png">-->
 
-                                <div class="mark">5.0</div>
-                            </a>
+                                <!--<div class="mark">5.0</div>-->
+                            <!--</a>-->
 
-                            <div class="info">
-                                <h4>我是路人甲</h4>
-                                <h6>三角关系紧锁秦岚</h6>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="item">
-                            <a href="">
-                                <img src="images/02.png">
+                            <!--<div class="info">-->
+                                <!--<h4>我是路人甲</h4>-->
+                                <!--<h6>三角关系紧锁秦岚</h6>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                        <!--<div class="item">-->
+                            <!--<a href="">-->
+                                <!--<img src="images/02.png">-->
 
-                                <div class="mark">5.0</div>
-                            </a>
+                                <!--<div class="mark">5.0</div>-->
+                            <!--</a>-->
 
-                            <div class="info">
-                                <h4>我是路人甲</h4>
-                                <h6>三角关系紧锁秦岚</h6>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="item">
-                            <a href="">
-                                <img src="images/02.png">
+                            <!--<div class="info">-->
+                                <!--<h4>我是路人甲</h4>-->
+                                <!--<h6>三角关系紧锁秦岚</h6>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                        <!--<div class="item">-->
+                            <!--<a href="">-->
+                                <!--<img src="images/02.png">-->
 
-                                <div class="mark">5.0</div>
-                            </a>
+                                <!--<div class="mark">5.0</div>-->
+                            <!--</a>-->
 
-                            <div class="info">
-                                <h4>我是路人甲</h4>
-                                <h6>三角关系紧锁秦岚</h6>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="item">
-                            <a href="">
-                                <img src="images/02.png">
+                            <!--<div class="info">-->
+                                <!--<h4>我是路人甲</h4>-->
+                                <!--<h6>三角关系紧锁秦岚</h6>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                        <!--<div class="item">-->
+                            <!--<a href="">-->
+                                <!--<img src="images/02.png">-->
 
-                                <div class="mark">5.0</div>
-                            </a>
+                                <!--<div class="mark">5.0</div>-->
+                            <!--</a>-->
 
-                            <div class="info">
-                                <h4>我是路人甲</h4>
-                                <h6>三角关系紧锁秦岚</h6>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="item">
-                            <a href="">
-                                <img src="images/02.png">
+                            <!--<div class="info">-->
+                                <!--<h4>我是路人甲</h4>-->
+                                <!--<h6>三角关系紧锁秦岚</h6>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                        <!--<div class="item">-->
+                            <!--<a href="">-->
+                                <!--<img src="images/02.png">-->
 
-                                <div class="mark">5.0</div>
-                            </a>
+                                <!--<div class="mark">5.0</div>-->
+                            <!--</a>-->
 
-                            <div class="info">
-                                <h4>我是路人甲</h4>
-                                <h6>三角关系紧锁秦岚</h6>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="item">
-                            <a href="">
-                                <img src="images/02.png">
+                            <!--<div class="info">-->
+                                <!--<h4>我是路人甲</h4>-->
+                                <!--<h6>三角关系紧锁秦岚</h6>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                        <!--<div class="item">-->
+                            <!--<a href="">-->
+                                <!--<img src="images/02.png">-->
 
-                                <div class="mark">5.0</div>
-                            </a>
+                                <!--<div class="mark">5.0</div>-->
+                            <!--</a>-->
 
-                            <div class="info">
-                                <h4>我是路人甲</h4>
-                                <h6>三角关系紧锁秦岚</h6>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="item">
-                            <a href="">
-                                <img src="images/02.png">
+                            <!--<div class="info">-->
+                                <!--<h4>我是路人甲</h4>-->
+                                <!--<h6>三角关系紧锁秦岚</h6>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                        <!--<div class="item">-->
+                            <!--<a href="">-->
+                                <!--<img src="images/02.png">-->
 
-                                <div class="mark">5.0</div>
-                            </a>
+                                <!--<div class="mark">5.0</div>-->
+                            <!--</a>-->
 
-                            <div class="info">
-                                <h4>我是路人甲</h4>
-                                <h6>三角关系紧锁秦岚</h6>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="item">
-                            <a href="">
-                                <img src="images/02.png">
+                            <!--<div class="info">-->
+                                <!--<h4>我是路人甲</h4>-->
+                                <!--<h6>三角关系紧锁秦岚</h6>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                        <!--<div class="item">-->
+                            <!--<a href="">-->
+                                <!--<img src="images/02.png">-->
 
-                                <div class="mark">5.0</div>
-                            </a>
+                                <!--<div class="mark">5.0</div>-->
+                            <!--</a>-->
 
-                            <div class="info">
-                                <h4>我是路人甲</h4>
-                                <h6>三角关系紧锁秦岚</h6>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
+                            <!--<div class="info">-->
+                                <!--<h4>我是路人甲</h4>-->
+                                <!--<h6>三角关系紧锁秦岚</h6>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</li>-->
+                <!--</ul>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
 </div>
 <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
 <script src="js/bootstrap.min.js"></script>

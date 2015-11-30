@@ -2,29 +2,201 @@
 <html class="media-page code-item">
 <head lang="zh_CN">
     <meta charset="UTF-8">
-    <title>专辑：</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="viewport" content="width=640,user-scalable=no,target-densitydpi=285"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+    <title>移动影视</title>
     <style>
-        body, html{
+
+        html, body {
+            margin: 0;
+            padding: 0;
+
             width: 100%;
             height: 100%;
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
+
+        .header {
+            /*height: 100%;*/
+            height: 7.875em;
+            width: 100%;
+
+            background: url("../images/phone/header-bg.jpg") repeat-x left top;
+            background-size: 100% 100%;
+        }
+
+        @media (max-width: 414px) {
+            .header .logo{
+                height: 100%;
+                margin-left: -30%;
+            }
+        }
+
+        @media (max-width: 375px) {
+            .header .logo{
+                height: 100%;
+                margin-left: -35%;
+            }
+        }
+
+        @media (max-width: 320px)  {
+            .header .logo {
+                /*width: 100%;*/
+                height: 100%;
+                margin-left: -45%;
+            }
+        }
+
+        .header .logo img {
+            /*display: block;*/
+            /*width: 100%;*/
+            height: 100%;
+        }
+
+        .container {
+            max-width: 100%;
+            height: 100%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .container .container-title {
+            width: 90%;
+            margin-top: 0.8em;
+            margin-bottom: 0.8em;
+            margin-left: 1em;
+            font-size: 1.2em;
+        }
+
+        .videoBox {
+            width: 100%;
+            height: 30%;
+            /*height: 6em;*/
+            /*height: 10em;*/
+            position: relative;
+            margin-bottom: 1em;
+        }
+
+        .videoBox .video-img, .videoBox .video-img img{
+            width: 100%;
+            /*height: 100%;*/
+            /*height: 10em;*/
+            height: 100%;
+        }
+
+        .videoBox .video-video{
+            width: 1px;
+            height: 1px;
+
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        .videoBox .video-video video{
+            width: 100%;
+            height: 100%;
+        }
+
+        .videoBox .video-button{
+            width: 25%;
+            /*height: 6em;*/
+            position: absolute;
+
+            left: 35%;
+            top: 25%;
+
+            cursor: pointer;
+        }
+
+        .videoBox .video-button img{
+            width: 100%;
+            height: 100%;
+        }
+
+        .detailBox, .detailBox .detali-top {
+            width: 100%;
+        }
+
+        .detailBox .detali-top img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .imgBox {
+            float: left;
+            width: 30%;
+        }
+
+        .detailBox .detali-top .spanBox {
+            float: left;
+            width: 65%;
+
+            margin-left: 0.5em;
+        }
+
+        .detailBox{
+            width: 90%;
+            margin-left: 1em;
+        }
+
+        .detailBox .detali-top .spanBox .title {
+            font-size: 1.5em;
+            /*margin-bottom: 3em;*/
+        }
+
+        .detailBox .detali-top .spanBox .brif {
+            width: 95%;
+            font-size: 1.2em;
+            line-height: 1.2em;
+        }
+
+        .detali-bottom {
+            width: 98%;
+            clear: both;
+            margin-top: 1em;
+            font-size: 1em;
         }
     </style>
 </head>
 <body>
-
-<div style="text-align: center; height: 100%">
-    <video id="v1" style="width:100%; height:100%" controls="" onmouseover="this.play()">
-        <source id="v2" src="">html5 video</video>
+<div class="header">
+    <div class="logo">
+        <img src="../images/phone/logo.png"/>
+    </div>
+</div>
+<div class="container">
+    <div class="container-title">
+        <span onclick="skipTo()">首页</span>
+        <span onclick="skipTo()">频道</span>
+    </div>
+    <div class="videoBox">
+        <div id="videoback" class="video-img"><img src="../images/banner2.png"/></div>
+        <div class="video-video"><video id="v1" controls="" onmouseover="this.play()"></video></div>
+        <div class="video-button" onclick="videoPlay()"><img src="../images/playBtn.png"/></div>
+    </div>
+    <div class="detailBox">
+        <div class="detali-top">
+            <div class="imgBox"><img id="sImg" src="../images/01.png"/></div>
+            <div class="spanBox">
+                <span id="title" class="title">新少林寺</span><br/><br/>
+                <span id="brif" class="brif">霍启发事业有成霍启发事业有成霍启发事业有成</span>
+            </div>
+        </div>
+        <div class="detali-bottom">
+            <p id="des">霍启发事业有成,收入不菲,霍启发事业有成,收入不菲,霍启发事业有成,收入不菲</p>
+        </div>
+    </div>
 </div>
 
 <script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/player.js"></script>
 <script type="text/javascript">
-    var url = location.search.split("=")[1];
-    url = "../"+url;
-//    url = "http://192.168.28.220/abc.mp4";
-    $("#v1").attr("src", url);
+    var IsPhone = true;
+    $(function () {
+        init();
+    })
+
 </script>
 </body>
 </html>

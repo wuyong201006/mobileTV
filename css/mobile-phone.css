@@ -11,7 +11,7 @@ html,body {
     overflow-y: auto;
 }
 .header {
-    height: 8em;
+    height: 126px;
     background: url("../images/phone/header-bg.png") repeat-x left top;
     background-size: auto 100%;
     margin-bottom: 1em;
@@ -23,24 +23,24 @@ html,body {
     margin-left: auto;
     margin-right: auto;
 }
-.banner .L-btn{
+.carousel-control .L-btn{
     background: url("../images/L-btn.png")no-repeat;
     position: absolute;
-    height: 73px;
+    height: 36.5px;
     left: 0;
-    top:140px;
+    /*top:140px;*/
     z-index: 999;
-    width:36px;
+    width:18px;
     background-size: 100% auto;
 }
-.banner .R-btn{
+.carousel-control .R-btn{
     background: url("../images/R-btn.png")no-repeat;
     position: absolute;
-    height: 73px;
+    height: 36.5px;
     right: 0;
-    top:140px;
+    /*top:140px;*/
     z-index: 999;
-    width:36px;
+    width:18px;
     background-size: 100% auto;
 
 }
@@ -128,6 +128,8 @@ html,body {
     width: 95%;
     height: 13em;
     color: #ffffff;
+
+    /*line-height: 1.5em;*/
 }
 
 /*.banner-box{*/
@@ -180,6 +182,41 @@ html,body {
     width: 50px;
     height: 62px;
 }
+
+
+.container .classify-top, .container .content{
+    width: 100%;
+}
+
+.container .classify-top{
+    margin-top: 1em;
+    margin-bottom: 0.8em;
+}
+
+.container .classify-top .classify-box{
+    width: 107%;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+.container .classify{
+    display: inline-block;
+}
+
+.classify-top .classify-box .classify{
+    width: 45%;
+    /*height: 94px;*/
+    margin-right: 0.5em;
+    margin-bottom: 0.8em;
+
+    cursor: pointer;
+}
+
+.classify-top .classify-box .classify img{
+    width: 100%;
+    height: 100%;
+}
+
 
 .item-box {
     margin-top: 1em;
@@ -398,7 +435,7 @@ html,body {
 }
 @media (max-width: 420px)  {
     .header {
-        height: 6em;
+        /*height: 6em;*/
     }
     .header .logo {
         margin-left:-18%;
@@ -411,10 +448,28 @@ html,body {
         padding-top: 0.5em;
     }
 }
+
+@media  (max-width: 414px){
+    .header .logo{
+        margin-left: -30%;
+    }
+}
+
+@media (max-width: 375px) {
+    .header .logo{
+        margin-left: -35%;
+    }
+}
+
 @media (max-width: 320px)  {
     body {
         font-size: 10px;
     }
+
+    .header .logo{
+        margin-left: -45%;
+    }
+
     .item .pic-rating {
         font-size: 0.8em;
     }
